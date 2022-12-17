@@ -1,6 +1,7 @@
 ﻿
 using EjerciciosClaseTresYCuatro.Ejercicio2;
 using EjerciciosClaseTresYCuatro.Ejercicio3;
+using EjerciciosClaseTresYCuatro.Ejercicio4;
 using System;
 
 namespace EjerciciosClaseTresYCuatro
@@ -37,8 +38,17 @@ namespace EjerciciosClaseTresYCuatro
 
             //p.fullname( p._name, p._lastname);
 
+            // Ejercicio 4 : Mostrar nombre, apellido y edad
 
+            //PersonaII p = new PersonaII();
+            //p._name = "Juan";
+            //p._lastname = " Pérez";
+            //p._dateOfBirth = new DateTime(2000,1,1);
 
+            //PersonaII p = new PersonaII("Pablo", "Keinkater",new DateTime(2000,1,1));
+
+            //p.fullname( p._name, p._lastname);
+            //p.age(p._dateOfBirth);
         }
 
     }
