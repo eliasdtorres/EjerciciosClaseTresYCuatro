@@ -1,5 +1,6 @@
 ﻿
 using EjerciciosClaseTresYCuatro.Ejercicio2;
+using EjerciciosClaseTresYCuatro.Ejercicio3;
 using System;
 
 namespace EjerciciosClaseTresYCuatro
@@ -26,7 +27,15 @@ namespace EjerciciosClaseTresYCuatro
             //    Console.WriteLine("No es un número.");
             //}
 
+            // Ejercicio 3 : Mostrar nombre y apellido
 
+            //Persona p = new Persona();
+            //p._name = "Juan";
+            //p._lastname = " Pérez";
+
+            //Persona p = new Persona("Pablo", "Keinkater");
+
+            //p.fullname( p._name, p._lastname);
 
 
 
