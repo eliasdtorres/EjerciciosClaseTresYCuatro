@@ -1,0 +1,15 @@
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\bin\Debug\net6.0\EjerciciosClaseTresYCuatro.exe
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\bin\Debug\net6.0\EjerciciosClaseTresYCuatro.deps.json
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\bin\Debug\net6.0\EjerciciosClaseTresYCuatro.runtimeconfig.json
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\bin\Debug\net6.0\EjerciciosClaseTresYCuatro.dll
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\bin\Debug\net6.0\EjerciciosClaseTresYCuatro.pdb
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\obj\Debug\net6.0\EjerciciosClaseTresYCuatro.csproj.AssemblyReference.cache
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\obj\Debug\net6.0\EjerciciosClaseTresYCuatro.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\obj\Debug\net6.0\EjerciciosClaseTresYCuatro.AssemblyInfoInputs.cache
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\obj\Debug\net6.0\EjerciciosClaseTresYCuatro.AssemblyInfo.cs
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\obj\Debug\net6.0\EjerciciosClaseTresYCuatro.csproj.CoreCompileInputs.cache
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\obj\Debug\net6.0\EjerciciosClaseTresYCuatro.dll
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\obj\Debug\net6.0\refint\EjerciciosClaseTresYCuatro.dll
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\obj\Debug\net6.0\EjerciciosClaseTresYCuatro.pdb
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\obj\Debug\net6.0\EjerciciosClaseTresYCuatro.genruntimeconfig.cache
+D:\Cursos\devLigth\Ejercicios\EjerciciosClaseTresYCuatro\EjerciciosClaseTresYCuatro\obj\Debug\net6.0\ref\EjerciciosClaseTresYCuatro.dll
