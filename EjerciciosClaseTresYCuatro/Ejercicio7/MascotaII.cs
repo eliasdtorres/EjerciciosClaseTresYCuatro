@@ -4,21 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-//6. Crear una clase Mascota con un método que sirva para alimentarlo. Por cada
-//alimento ingerido, incrementa su energía en un 30%. La Mascota debe tener
-//nombre, y tipo (gato o perro).
-namespace EjerciciosClaseTresYCuatro.Ejercicio6
+namespace EjerciciosClaseTresYCuatro.Ejercicio7
 {
-    internal class Mascota
+    internal class MascotaII
     {
+
         public string name { get; set; }
         public int energy { get; set; }
         public string typePet { get; set; }
 
 
-        public Mascota() { }
+        public MascotaII() { }
 
         public int alimentar(string name, int energy)
         {
@@ -27,6 +23,11 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio6
             return this.energy += (energy * 30) / 100;
         }
 
+        public int correr(int energy)
+        {
+
+            return this.energy -= (energy * 10) / 100;
+        }
 
 
 
