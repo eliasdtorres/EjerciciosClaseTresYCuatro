@@ -2,7 +2,10 @@
 using EjerciciosClaseTresYCuatro.Ejercicio2;
 using EjerciciosClaseTresYCuatro.Ejercicio3;
 using EjerciciosClaseTresYCuatro.Ejercicio4;
+using EjerciciosClaseTresYCuatro.Ejercicio5;
+using EjerciciosClaseTresYCuatro.Ejercicio6;
 using System;
+using System.IO.IsolatedStorage;
 
 namespace EjerciciosClaseTresYCuatro
 {
@@ -11,7 +14,7 @@ namespace EjerciciosClaseTresYCuatro
         public static void Main(string[] args)
         {
 
-
+            //---------------------------------------------------------------------------------------------------
 
             // Ejercicio 2 : área de un cuadrado
 
@@ -20,13 +23,16 @@ namespace EjerciciosClaseTresYCuatro
             //try
             //{
             //    square._side = int.Parse(Console.ReadLine());
-            //    Console.WriteLine("El área de un cuadrado de lado: " + square._side + " es de: " + square.squareArea(square._side));
+            //    Console.WriteLine("El área de un cuadrado de lado: " + square._side +
+            //    " es de: " + square.squareArea(square._side));
             //}
             //catch (FormatException) 
             //{
 
             //    Console.WriteLine("No es un número.");
             //}
+
+            //---------------------------------------------------------------------------------------------------
 
             // Ejercicio 3 : Mostrar nombre y apellido
 
@@ -37,6 +43,8 @@ namespace EjerciciosClaseTresYCuatro
             //Persona p = new Persona("Pablo", "Keinkater");
 
             //p.fullname( p._name, p._lastname);
+
+            //---------------------------------------------------------------------------------------------------
 
             // Ejercicio 4 : Mostrar nombre, apellido y edad
 
@@ -49,6 +57,112 @@ namespace EjerciciosClaseTresYCuatro
 
             //p.fullname( p._name, p._lastname);
             //p.age(p._dateOfBirth);
+
+            //---------------------------------------------------------------------------------------------------
+
+            // Ejercicio 5 : encender Auto
+
+            //Auto car = new Auto();
+            //car._carBrand = "Ford";
+            //car._model = "Mustang";
+            //car._color = "Red";
+
+            //Console.WriteLine("Marca del vehículo: " + car._carBrand + "\nModelo: " + car._model + "\nColor: " + car._color);
+            //string res = "";
+
+            //if (car._isOn)
+            //{
+            //    do
+            //    {
+            //        Console.WriteLine("¿Apagar vehículo? s/n ");
+            //        res = Console.ReadLine().ToLower();
+
+            //    } while (res != "s" && res != "n");
+
+            //    if (res == "s")
+            //    {
+            //        car.stoptEngine();
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("El vehículo continúa en marcha.");
+            //    }
+            //}
+            //else
+            //{
+            //    do
+            //    {
+            //        Console.WriteLine("¿Encender el vehículo? s/n ");
+            //        res = Console.ReadLine().ToLower();
+
+            //    } while (res != "s" && res != "n");
+
+            //    if (res == "s")
+            //    {
+            //        car.startEngine();
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("El vehículo continúa con el motor detenido.");
+            //    }
+            //}
+
+
+            //---------------------------------------------------------------------------------------------------
+
+
+            // Ejercicio 6 : Alimentar mascota
+
+            //Mascota mascota = new Mascota();
+            //mascota.name = "Pelusa";
+            //mascota.energy = 60;
+            //mascota.typePet = "gato";
+            //string res = "";
+            //int count = 0;
+            //bool canEat = false;
+
+            //do
+            //{
+            //    do
+            //    {
+
+            //        Console.WriteLine("¿Alimentar a " + mascota.name + "?");
+            //        res = Console.ReadLine().ToLower();
+
+
+
+            //        count++;
+
+            //    } while (mascota.energy < 100 && res != "s" && res != "n" && count <= 3);
+
+
+            //    if (res == "s")
+            //    {
+            //        mascota.alimentar(mascota.name, mascota.energy);
+            //        Console.WriteLine("Energía actual: " + mascota.energy + "%.");
+            //        if (mascota.energy > 100)
+            //        {
+            //            Console.WriteLine(mascota.name + " debe ir a gastar energía.");
+            //        }
+
+
+
+            //    }
+            //    else if (count > 3)
+            //    {
+            //        Console.WriteLine(mascota.name + " se cansó de esperar y se fue.");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("No se alimentó a " + mascota.name);
+            //        Console.WriteLine("Energía actual: " + mascota.energy + "%.");
+            //    }
+
+            //} while (mascota.energy<100);
+
+
+            // Ejercicio 7 : Al ejercicio 6 añadir método correr().
+
         }
 
     }
