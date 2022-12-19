@@ -29,10 +29,10 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio8
             return this._vol =0;
         }
 
-        public int screenBrightness(int display, bool up)
-        {
+        //public int screenBrightness(int display, bool up)
+        //{
             
-        }
+        //}
 
     }
 

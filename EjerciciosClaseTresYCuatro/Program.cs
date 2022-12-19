@@ -112,118 +112,86 @@ namespace EjerciciosClaseTresYCuatro
             //---------------------------------------------------------------------------------------------------
 
 
-            // Ejercicio 6 : Alimentar mascota
+            // Ejercicio 6 : Alimentar mascota && Ejercicio 7 : agregar método correr();
 
-            //Mascota mascota = new Mascota();
-            //mascota.name = "Pelusa";
-            //mascota.energy = 60;
-            //mascota.typePet = "gato";
-            //string res = "";
-            //int count = 0;
+            MascotaII mascota = new MascotaII();
+            string res = "";
 
-            //do
-            //{
-            //    do
-            //    {
+            mascota.createPet(mascota);
 
-            //        Console.WriteLine("¿Alimentar a " + mascota.name + "?");
-            //        res = Console.ReadLine().ToLower();
+            Console.WriteLine("¿Qué desea hacer con su mascota?");
+
+            do
+            {
+                Console.WriteLine("1 - Alimentar\n2 - Jugar\n3 - Nada");
+                res = Console.ReadLine().ToLower();
 
 
 
-            //        count++;
+                if (res == "1" || res == "alimentar")
+                {
 
-            //    } while (mascota.energy < 100 && res != "s" && res != "n" && count <= 3);
+                    if (mascota.energy > 100)
+                    {
+                        Console.WriteLine("Tu mascota ya comió demasiado.");
+                        Console.WriteLine("Energía actual: " + mascota.energy);
+                        res = "default";
+                    }
+                    else
+                    {
 
+                        mascota.alimentar(mascota.name, mascota.energy);
+                    }
+                }
+                else if (res == "2" || res == "jugar")
+                {
 
-            //    if (res == "s")
-            //    {
-            //        mascota.alimentar(mascota.name, mascota.energy);
-            //        Console.WriteLine("Energía actual: " + mascota.energy + "%.");
-            //        if (mascota.energy > 100)
-            //        {
-            //            Console.WriteLine(mascota.name + " debe ir a gastar energía.");
-            //        }
+                    if (mascota.energy <= 20)
+                    {
+                        Console.WriteLine("Tu mascota no tiene suficiente energía.");
+                        Console.WriteLine("Energía restante: " + mascota.energy);
+                        res = "nada";
+                    }
+                    else
+                    {
+                        mascota.correr(mascota.energy);
+                    }
+                }
+                else if (res == "3" || res == "nada")
+                {
+                    res = "nada";
+                }
+                else
+                {
+                    Console.WriteLine("Seleccione una opción válida");
+                    res = "default";
+                }
 
+               
 
+            } while (res == "default" || res != "nada");
 
-            //    }
-            //    else if (count > 3)
-            //    {
-            //        Console.WriteLine(mascota.name + " se cansó de esperar y se fue.");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("No se alimentó a " + mascota.name);
-            //        Console.WriteLine("Energía actual: " + mascota.energy + "%.");
-            //    }
-
-            //} while (mascota.energy<100);
-
-
-            // Ejercicio 7 : Al ejercicio 6 añadir método correr.
-
-            //MascotaII mascota = new MascotaII();
-            //mascota.name = "Pelusa";
-            //mascota.energy = 50;
-            //mascota.typePet = "gato";
-            //string res = "";
-            //int count = 0;
-            //bool mustRun = false;
-
-            //do
-            //{
-            //    do
-            //    {
-
-            //        Console.WriteLine("¿Alimentar a " + mascota.name + "?");
-            //        res = Console.ReadLine().ToLower();
-
-
-
-            //        count++;
-
-            //    } while (mascota.energy < 100 && res != "s" && res != "n" && count <= 3);
-
-
-            //    if (res == "s")
-            //    {
-            //        mascota.alimentar(mascota.name, mascota.energy);
-            //        Console.WriteLine("Energía actual: " + mascota.energy + "%.");
-
-            //        if (mascota.energy > 100)
-            //        {
-            //            Console.WriteLine(mascota.name + " debe ir a gastar energía.");
-            //            mustRun = true;
-            //        }
+            if (res == "nada")
+            {
+                Console.WriteLine(mascota.name + " se retiró sileciosamente");
+            }
 
 
 
-            //    }
-            //    else if (count > 3)
-            //    {
-            //        Console.WriteLine(mascota.name + " se cansó de esperar y se fue.");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("No se alimentó a " + mascota.name);
-            //        Console.WriteLine("Energía actual: " + mascota.energy + "%.");
-            //    }
 
-            //} while (mascota.energy < 100);
 
-            //if (mustRun)
-            //{
-            //    do
-            //    {
-            //        mascota.correr(mascota.energy);
-            //        Console.WriteLine(mascota.name + " fué a correr, gastó 10% de energía.\nEnergía actual: " +
-            //            mascota.energy);
-            //    } while (mascota.energy > 20);
-            //    mustRun = false;
 
-            //}
-            //Console.WriteLine(mascota.name + " tiene " + mascota.energy + "% de energía, no quiere hacer mas nada. Se va a dormir.");
+
+
+
+
+
+
+
+
+
+
+          
 
         }
 
