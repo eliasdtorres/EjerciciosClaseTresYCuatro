@@ -1,5 +1,6 @@
 ﻿
 using EjerciciosClaseTresYCuatro.Ejercicio_9;
+using EjerciciosClaseTresYCuatro.Ejercicio10;
 using EjerciciosClaseTresYCuatro.Ejercicio2;
 using EjerciciosClaseTresYCuatro.Ejercicio3;
 using EjerciciosClaseTresYCuatro.Ejercicio4;
@@ -10,6 +11,7 @@ using EjerciciosClaseTresYCuatro.Ejercicio8;
 using System;
 using System.Globalization;
 using System.IO.IsolatedStorage;
+using static EjerciciosClaseTresYCuatro.Ejercicio4.PersonaII;
 
 namespace EjerciciosClaseTresYCuatro
 {
@@ -340,8 +342,11 @@ namespace EjerciciosClaseTresYCuatro
             //    }
             //} while (res == "default");
 
-
-
+            //Ejercicio 11 : Agregarle a una persona un Smartphone. Uso de herencia.
+            Smartphone smartphone= new Smartphone();
+            PersonaIII p = new PersonaIII();
+            Console.WriteLine(p.getSmart(p));
+            
 
 
         }

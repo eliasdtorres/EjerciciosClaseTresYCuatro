@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EjerciciosClaseTresYCuatro.Ejercicio8;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,6 +37,37 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio4
         {
             int age = DateTime.Today.AddTicks(-_dateOfBirth.Ticks).Year - 1;
             Console.WriteLine("Edad: "+age);
+        }
+
+        //Ejercicio 10
+        //10.Agregar a la clase Persona la posibilidad de tener un Smartphone.
+        public class PersonaIII : PersonaII
+        {
+            public Smartphone smart { get; set; }
+
+
+            public PersonaIII() {
+                
+            
+            }
+            
+
+            public PersonaIII getSmart(PersonaIII p)
+            {
+                smart._brand = "Xiaomi";
+                smart._model = "MiA2";
+                p.smart = smart;
+
+
+                return p;
+            }
+
+
+           
+
+
+
+
         }
     }
 }
