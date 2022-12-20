@@ -1,6 +1,5 @@
 ﻿
 using EjerciciosClaseTresYCuatro.Ejercicio_9;
-using EjerciciosClaseTresYCuatro.Ejercicio10;
 using EjerciciosClaseTresYCuatro.Ejercicio2;
 using EjerciciosClaseTresYCuatro.Ejercicio3;
 using EjerciciosClaseTresYCuatro.Ejercicio4;
@@ -343,9 +342,36 @@ namespace EjerciciosClaseTresYCuatro
             //} while (res == "default");
 
             //Ejercicio 11 : Agregarle a una persona un Smartphone. Uso de herencia.
-            Smartphone smartphone= new Smartphone();
-            PersonaIII p = new PersonaIII();
-            Console.WriteLine(p.getSmart(p));
+            //string res = "";
+            //PersonaIII p = new PersonaIII();
+            //p = p.createPersona();
+
+            //do
+            //{
+
+            //    Console.WriteLine("¿Adquirir Smartphone? S/N");
+            //    res = Console.ReadLine().ToLower();
+
+
+            //    if (res != "s" && res != "n")
+            //    {
+            //        Console.WriteLine("Elija una opción válida. s/n");
+            //    }
+
+            //} while (res != "s" && res != "n");
+
+
+            //if (res == "s")
+            //{
+            //    Smartphone smartphone= new Smartphone();
+
+            //    p.smart = smartphone.createSmartphone(smartphone);
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No se adquirió ningun smartphone");
+            //}
             
 
 

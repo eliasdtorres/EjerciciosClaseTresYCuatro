@@ -31,8 +31,10 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio8
 
             Console.WriteLine("Ingrese modelo.");
             smart._model = Console.ReadLine();
-
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Teléfono móvil adquirido: ");
             Console.WriteLine("Marca: " + smart._brand + "\nModelo: " + smart._model);
+            Console.WriteLine("-----------------------------");
             smart.display = 50;
             smart.isOn = false;
             smart._vol = 50;
