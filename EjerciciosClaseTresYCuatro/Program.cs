@@ -5,7 +5,9 @@ using EjerciciosClaseTresYCuatro.Ejercicio4;
 using EjerciciosClaseTresYCuatro.Ejercicio5;
 using EjerciciosClaseTresYCuatro.Ejercicio6;
 using EjerciciosClaseTresYCuatro.Ejercicio7;
+using EjerciciosClaseTresYCuatro.Ejercicio8;
 using System;
+using System.Globalization;
 using System.IO.IsolatedStorage;
 
 namespace EjerciciosClaseTresYCuatro
@@ -114,84 +116,182 @@ namespace EjerciciosClaseTresYCuatro
 
             // Ejercicio 6 : Alimentar mascota && Ejercicio 7 : agregar método correr();
 
-            MascotaII mascota = new MascotaII();
+            //MascotaII mascota = new MascotaII();
+            //string res = "";
+
+            //mascota.createPet(mascota);
+
+            //Console.WriteLine("¿Qué desea hacer con su mascota?");
+
+            //do
+            //{
+            //    Console.WriteLine("1 - Alimentar\n2 - Jugar\n3 - Nada");
+            //    res = Console.ReadLine().ToLower();
+
+
+
+            //    if (res == "1" || res == "alimentar")
+            //    {
+
+            //        if (mascota.energy > 100)
+            //        {
+            //            Console.WriteLine("Tu mascota ya comió demasiado.");
+            //            Console.WriteLine("Energía actual: " + mascota.energy);
+            //            res = "default";
+            //        }
+            //        else
+            //        {
+
+            //            mascota.alimentar(mascota.name, mascota.energy);
+            //        }
+            //    }
+            //    else if (res == "2" || res == "jugar")
+            //    {
+
+            //        if (mascota.energy <= 20)
+            //        {
+            //            Console.WriteLine("Tu mascota no tiene suficiente energía.");
+            //            Console.WriteLine("Energía restante: " + mascota.energy);
+            //            res = "nada";
+            //        }
+            //        else
+            //        {
+            //            mascota.correr(mascota.energy);
+            //        }
+            //    }
+            //    else if (res == "3" || res == "nada")
+            //    {
+            //        res = "nada";
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Seleccione una opción válida");
+            //        res = "default";
+            //    }
+
+
+
+            //} while (res == "default" || res != "nada");
+
+            //if (res == "nada")
+            //{
+            //    Console.WriteLine(mascota.name + " se retiró sileciosamente");
+            //}
+
+
+            //Ejercicio 9 : Smartphone
+
+            Smartphone smart = new Smartphone();
             string res = "";
+            string resIsOff = "";
 
-            mascota.createPet(mascota);
+            smart.createSmartphone(smart);
+            Console.WriteLine("--------------------------------");
 
-            Console.WriteLine("¿Qué desea hacer con su mascota?");
 
             do
             {
-                Console.WriteLine("1 - Alimentar\n2 - Jugar\n3 - Nada");
-                res = Console.ReadLine().ToLower();
 
 
+                Console.WriteLine("Acciones: Elija el número de la acción.");
 
-                if (res == "1" || res == "alimentar")
+                
+
+                if (smart.isOn)
                 {
 
-                    if (mascota.energy > 100)
-                    {
-                        Console.WriteLine("Tu mascota ya comió demasiado.");
-                        Console.WriteLine("Energía actual: " + mascota.energy);
-                        res = "default";
-                    }
-                    else
-                    {
+                    Console.WriteLine("1- Encender \n2- Apagar\n3- Subir volúmen\n4- Bajar volúmen\n5- Silenciar\n6-Quitar silencio\n7- Subir brillo\n8- Bajar brillo\n9- Salir");
+                    Console.WriteLine("--------------------------------");
+                    res = Console.ReadLine();
 
-                        mascota.alimentar(mascota.name, mascota.energy);
-                    }
-                }
-                else if (res == "2" || res == "jugar")
-                {
+                    switch (res)
+                    {
+                        case "1":
+                            Console.WriteLine("--------------------------------");
+                            smart.turnOn(smart);
+                            Console.WriteLine("--------------------------------");
 
-                    if (mascota.energy <= 20)
-                    {
-                        Console.WriteLine("Tu mascota no tiene suficiente energía.");
-                        Console.WriteLine("Energía restante: " + mascota.energy);
-                        res = "nada";
+                            res = "default";
+                            break;
+                        case "2":
+                            Console.WriteLine("--------------------------------");
+                            smart.turnOff(smart);
+                            Console.WriteLine("--------------------------------");
+                            
+                            break;
+                        case "3":
+                            smart.volUp(smart);
+                            Console.WriteLine("--------------------------------");
+                            Console.WriteLine("--------------------------------");
+                            res = "default";
+                            break;
+                        case "4":
+                            Console.WriteLine("--------------------------------");
+                            smart.volDown(smart);
+                            Console.WriteLine("--------------------------------");
+                            res = "default";
+                            break;
+                        case "5":
+                            Console.WriteLine("--------------------------------");
+                            smart.mute(smart);
+                            Console.WriteLine("--------------------------------");
+                            res = "default";
+                            break;
+                        case "6":
+                            Console.WriteLine("--------------------------------");
+                            smart.unMute(smart);
+                            Console.WriteLine("--------------------------------");
+                            res = "default";
+                            break;
+                        case "7":
+                            Console.WriteLine("--------------------------------");
+                            smart.brightUp(smart);
+                            Console.WriteLine("--------------------------------");
+                            res = "default";
+                            break;
+                        case "8":
+                            Console.WriteLine("--------------------------------");
+                            smart.brightDown(smart);
+                            Console.WriteLine("--------------------------------");
+                            res = "default";
+                            break;
+                        case "9":
+                            break;
+                        default:
+                            Console.WriteLine("Elija una opción válida.");
+                            res = "default";
+                            break;
                     }
-                    else
-                    {
-                        mascota.correr(mascota.energy);
-                    }
-                }
-                else if (res == "3" || res == "nada")
-                {
-                    res = "nada";
                 }
                 else
                 {
-                    Console.WriteLine("Seleccione una opción válida");
-                    res = "default";
+                    Console.WriteLine("1- Encender\n2- Salir");
+                    Console.WriteLine("--------------------------------");
+                    resIsOff = Console.ReadLine();
+
+                    switch (resIsOff)
+                    {
+                        case "1": smart.turnOn(smart);
+                            break;
+                        case "2":
+                            smart.isOn = false;
+                            break;
+                        default:
+                            smart.isOn = false;
+                            break;
+                    }
+
+
                 }
+                
 
-               
+            } while (res == "default" || resIsOff == "1");
 
-            } while (res == "default" || res != "nada");
 
-            if (res == "nada")
-            {
-                Console.WriteLine(mascota.name + " se retiró sileciosamente");
-            }
+            Console.WriteLine("Programa finalizado");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
 
         }
 
