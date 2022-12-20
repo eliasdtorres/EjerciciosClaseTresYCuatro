@@ -22,8 +22,6 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio8
         public bool isOn { get; set; }
 
 
-        public Smartphone() { }
-
 
         public Smartphone createSmartphone(Smartphone smart)
         {

@@ -1,4 +1,5 @@
 ﻿
+using EjerciciosClaseTresYCuatro.Ejercicio_9;
 using EjerciciosClaseTresYCuatro.Ejercicio2;
 using EjerciciosClaseTresYCuatro.Ejercicio3;
 using EjerciciosClaseTresYCuatro.Ejercicio4;
@@ -179,116 +180,166 @@ namespace EjerciciosClaseTresYCuatro
             //}
 
 
-            //Ejercicio 9 : Smartphone
+            //Ejercicio 8 : Smartphone
 
-            Smartphone smart = new Smartphone();
-            string res = "";
-            string resIsOff = "";
+            //Smartphone smart = new Smartphone();
+            //string res = "";
+            //string resIsOff = "";
 
-            smart.createSmartphone(smart);
-            Console.WriteLine("--------------------------------");
-
-
-            do
-            {
+            //smart.createSmartphone(smart);
+            //Console.WriteLine("--------------------------------");
 
 
-                Console.WriteLine("Acciones: Elija el número de la acción.");
-
-                
-
-                if (smart.isOn)
-                {
-
-                    Console.WriteLine("1- Encender \n2- Apagar\n3- Subir volúmen\n4- Bajar volúmen\n5- Silenciar\n6-Quitar silencio\n7- Subir brillo\n8- Bajar brillo\n9- Salir");
-                    Console.WriteLine("--------------------------------");
-                    res = Console.ReadLine();
-
-                    switch (res)
-                    {
-                        case "1":
-                            Console.WriteLine("--------------------------------");
-                            smart.turnOn(smart);
-                            Console.WriteLine("--------------------------------");
-
-                            res = "default";
-                            break;
-                        case "2":
-                            Console.WriteLine("--------------------------------");
-                            smart.turnOff(smart);
-                            Console.WriteLine("--------------------------------");
-                            
-                            break;
-                        case "3":
-                            smart.volUp(smart);
-                            Console.WriteLine("--------------------------------");
-                            Console.WriteLine("--------------------------------");
-                            res = "default";
-                            break;
-                        case "4":
-                            Console.WriteLine("--------------------------------");
-                            smart.volDown(smart);
-                            Console.WriteLine("--------------------------------");
-                            res = "default";
-                            break;
-                        case "5":
-                            Console.WriteLine("--------------------------------");
-                            smart.mute(smart);
-                            Console.WriteLine("--------------------------------");
-                            res = "default";
-                            break;
-                        case "6":
-                            Console.WriteLine("--------------------------------");
-                            smart.unMute(smart);
-                            Console.WriteLine("--------------------------------");
-                            res = "default";
-                            break;
-                        case "7":
-                            Console.WriteLine("--------------------------------");
-                            smart.brightUp(smart);
-                            Console.WriteLine("--------------------------------");
-                            res = "default";
-                            break;
-                        case "8":
-                            Console.WriteLine("--------------------------------");
-                            smart.brightDown(smart);
-                            Console.WriteLine("--------------------------------");
-                            res = "default";
-                            break;
-                        case "9":
-                            break;
-                        default:
-                            Console.WriteLine("Elija una opción válida.");
-                            res = "default";
-                            break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("1- Encender\n2- Salir");
-                    Console.WriteLine("--------------------------------");
-                    resIsOff = Console.ReadLine();
-
-                    switch (resIsOff)
-                    {
-                        case "1": smart.turnOn(smart);
-                            break;
-                        case "2":
-                            smart.isOn = false;
-                            break;
-                        default:
-                            smart.isOn = false;
-                            break;
-                    }
+            //do
+            //{
 
 
-                }
-                
-
-            } while (res == "default" || resIsOff == "1");
+            //    Console.WriteLine("Acciones: Elija el número de la acción.");
 
 
-            Console.WriteLine("Programa finalizado");
+
+            //    if (smart.isOn)
+            //    {
+
+            //        Console.WriteLine("1- Encender \n2- Apagar\n3- Subir volúmen\n4- Bajar volúmen\n5- Silenciar\n6-Quitar silencio\n7- Subir brillo\n8- Bajar brillo\n9- Salir");
+            //        Console.WriteLine("--------------------------------");
+            //        res = Console.ReadLine();
+
+            //        switch (res)
+            //        {
+            //            case "1":
+            //                Console.WriteLine("--------------------------------");
+            //                smart.turnOn(smart);
+            //                Console.WriteLine("--------------------------------");
+
+            //                res = "default";
+            //                break;
+            //            case "2":
+            //                Console.WriteLine("--------------------------------");
+            //                smart.turnOff(smart);
+            //                Console.WriteLine("--------------------------------");
+
+            //                break;
+            //            case "3":
+            //                smart.volUp(smart);
+            //                Console.WriteLine("--------------------------------");
+            //                Console.WriteLine("--------------------------------");
+            //                res = "default";
+            //                break;
+            //            case "4":
+            //                Console.WriteLine("--------------------------------");
+            //                smart.volDown(smart);
+            //                Console.WriteLine("--------------------------------");
+            //                res = "default";
+            //                break;
+            //            case "5":
+            //                Console.WriteLine("--------------------------------");
+            //                smart.mute(smart);
+            //                Console.WriteLine("--------------------------------");
+            //                res = "default";
+            //                break;
+            //            case "6":
+            //                Console.WriteLine("--------------------------------");
+            //                smart.unMute(smart);
+            //                Console.WriteLine("--------------------------------");
+            //                res = "default";
+            //                break;
+            //            case "7":
+            //                Console.WriteLine("--------------------------------");
+            //                smart.brightUp(smart);
+            //                Console.WriteLine("--------------------------------");
+            //                res = "default";
+            //                break;
+            //            case "8":
+            //                Console.WriteLine("--------------------------------");
+            //                smart.brightDown(smart);
+            //                Console.WriteLine("--------------------------------");
+            //                res = "default";
+            //                break;
+            //            case "9":
+            //                break;
+            //            default:
+            //                Console.WriteLine("Elija una opción válida.");
+            //                res = "default";
+            //                break;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("1- Encender\n2- Salir");
+            //        Console.WriteLine("--------------------------------");
+            //        resIsOff = Console.ReadLine();
+
+            //        switch (resIsOff)
+            //        {
+            //            case "1": smart.turnOn(smart);
+            //                break;
+            //            case "2":
+            //                smart.isOn = false;
+            //                break;
+            //            default:
+            //                smart.isOn = false;
+            //                break;
+            //        }
+
+
+            //    }
+
+
+            //} while (res == "default" || resIsOff == "1");
+
+
+            //Console.WriteLine("Programa finalizado");
+
+
+            // Ejercicio 9 : Auto , añadir métodos de acelearación y desaceleración
+
+            //string res = "";
+            //AutoII car = new AutoII();
+            //car.createCar(car);
+
+
+            //do
+            //{
+            //    Console.WriteLine("--------------------------------");
+            //    Console.WriteLine("Seleccione una acción. Elija el número correspondiente");
+            //    Console.WriteLine("1- Encender vehiculo\n2- Apagar vehículo\n3- Acelerar\n4- Desacelerar\n5- Salir");
+            //    Console.WriteLine("--------------------------------");
+            //    res = Console.ReadLine();
+            //    switch (res)
+            //    {
+            //        case "1":
+            //            car._isOn = car.startEngine(car._isOn);
+            //            res = "default";
+            //            Console.WriteLine("--------------------------------");
+            //            break;
+            //        case "2":
+            //            car._isOn = car.stopEngine(car._isOn);
+            //            res = "default";
+            //            Console.WriteLine("--------------------------------");
+            //            break;
+            //        case "3":
+            //            car.velocity = car.acelerate(car);
+            //            Console.WriteLine("Velocidad actual: " + car.velocity + " km/h");
+            //            res = "default";
+            //            Console.WriteLine("--------------------------------");
+            //            break;
+            //        case "4":
+            //            car.velocity = car.decelerate(car);
+            //            Console.WriteLine("Velocidad actual: " + car.velocity + " km/h");
+            //            Console.WriteLine("--------------------------------");
+            //            res = "default";
+            //            break;
+            //        case "5":
+            //            break;
+            //        default:
+            //            Console.WriteLine("Elija una opción válida");
+            //            res = "default";
+            //            Console.WriteLine("--------------------------------");
+            //            break;
+            //    }
+            //} while (res == "default");
+
 
 
 
