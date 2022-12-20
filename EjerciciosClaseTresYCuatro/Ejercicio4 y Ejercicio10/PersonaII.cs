@@ -1,9 +1,11 @@
-﻿using EjerciciosClaseTresYCuatro.Ejercicio8;
+﻿using EjerciciosClaseTresYCuatro.Ejercicio_9;
+using EjerciciosClaseTresYCuatro.Ejercicio8;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static EjerciciosClaseTresYCuatro.Ejercicio_9.AutoII;
 
 namespace EjerciciosClaseTresYCuatro.Ejercicio4
 {
@@ -33,10 +35,11 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio4
 
         }
 
-        public void age(DateTime _dateOfBirth)
+        public int age(DateTime _dateOfBirth)
         {
             int age = DateTime.Today.AddTicks(-_dateOfBirth.Ticks).Year - 1;
-            Console.WriteLine("Edad: "+age);
+            Console.WriteLine("Edad: " + age);
+            return age;
         }
 
         //Ejercicio 10
@@ -44,11 +47,12 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio4
         public class PersonaIII : PersonaII
         {
             public Smartphone smart { get; set; }
+            public bool drive { get; set; }
+
+            public PersonaIII()
+            {
 
 
-            public PersonaIII() {
-                
-            
             }
 
 
@@ -99,8 +103,30 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio4
 
 
 
+            public bool driveCar(PersonaIII p)
+            {
+                string res = "";
 
-           
+                do
+                { 
+                    Console.WriteLine("¿Subirse al vehículo? s/n");
+                    res = Console.ReadLine().ToLower();
+
+                } while (res != "s" && res != "n");
+
+                if (res == "s")
+                {
+                    p.drive = true;
+
+                }
+                else
+                {
+                   Console.WriteLine(p._name + " no desea conducir. ");
+                    p.drive = false;
+                }
+
+                return drive;
+            }
 
 
 

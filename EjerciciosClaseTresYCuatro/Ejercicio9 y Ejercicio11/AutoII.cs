@@ -1,9 +1,12 @@
-﻿using EjerciciosClaseTresYCuatro.Ejercicio5;
+﻿using EjerciciosClaseTresYCuatro.Ejercicio4;
+using EjerciciosClaseTresYCuatro.Ejercicio5;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static EjerciciosClaseTresYCuatro.Ejercicio4.PersonaII;
 //9. Añadir a la clase Auto un método para acelerar y para frenar. Cada vez que el
 //auto acelera incrementa su velocidad en un 10%. Y cada vez que frena
 //reduce su velocidad en un 20%. Se debe encender el motor del auto para
@@ -67,7 +70,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio_9
 
         public double acelerate(AutoII car)
         {
-            if (car._isOn && car.velocity<=0)
+            if (car._isOn && car.velocity <= 0)
             {
                 car.velocity = 40;
                 Console.WriteLine("Se aceleró el vehículo.");
@@ -77,7 +80,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio_9
             {
                 car.velocity += car.velocity * 0.1;
                 Console.WriteLine("Se aceleró el vehículo.");
-                if (car.velocity>130)
+                if (car.velocity > 130)
                 {
                     Console.WriteLine("Se llegó a la velocidad máxima permitida.");
                     return car.velocity = 130;
@@ -91,12 +94,12 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio_9
         {
             if (car._isOn && car.velocity > 0)
             {
-                car.velocity -= car.velocity*0.2;
+                car.velocity -= car.velocity * 0.2;
                 Console.WriteLine("Se desaceleró el vehículo.");
-                if (car.velocity <1)
+                if (car.velocity < 1)
                 {
                     Console.WriteLine("El vehículo se detuvo");
-                   return car.velocity = 0;
+                    return car.velocity = 0;
                 }
                 return car.velocity;
             }
@@ -108,8 +111,58 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio_9
         }
 
 
+        // Ejercicio 11 : Agregar a la clase Auto, la posibilidad de tener una Persona como conductor.
+        // Siendo que ahora el auto no puede encender su motor si no hay un conductor presente.Además el Conductor debe tener 18 años como mínimo.
+        public class AutoIII : AutoII
+        {
+            PersonaII driver = new PersonaII();
+            public bool gotDriver { get; set; }
 
 
+            public AutoIII() { }
+
+            public bool getDriver(PersonaIII driver)
+            {
+
+
+
+                return gotDriver;
+            }
+            public bool startEngine(PersonaIII p)
+            {
+
+                if (p.drive)
+                {
+                    if (p.age(p._dateOfBirth) >= 18)
+                    {
+                        Console.WriteLine("Es mayor de edad, puede conducir");
+                        Console.WriteLine("El vehículo está encendido.");
+                        
+                        return _isOn = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine(" No es mayor de edad, no puede conducir");
+                        Console.WriteLine("El vehículo está apagado.");
+                        return _isOn =false;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No hay conductor en el vehículo");
+                    Console.WriteLine("El vehículo está apagado.");
+                    return _isOn=false;
+                }
+
+            }
+
+
+
+
+
+
+
+        }
 
 
 
