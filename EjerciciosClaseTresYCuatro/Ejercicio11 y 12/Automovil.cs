@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 using static EjerciciosClaseTresYCuatro.Ejercicio4.PersonaII;
 // Ejercicio 11 : Agregar a la clase Auto, la posibilidad de tener una Persona como conductor.
 // Siendo que ahora el auto no puede encender su motor si no hay un conductor presente.Además el Conductor debe tener 18 años como mínimo.
-
+//12.Agregar a la clase Auto la posibilidad de llevar Pasajeros. (de 0 a la
+//capacidad que tenga el auto). Considere agregar una property Capacidad
 namespace EjerciciosClaseTresYCuatro.Ejercicio11
 {
     internal class Automovil
@@ -22,13 +23,45 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
         public bool _isOn { get; set; }
 
+        public int capacity { get; set; }
+
 
 
 
         public Automovil createCar(Automovil car)
         {
-
+            string res = "";
             Console.WriteLine("Registro de Vehículo");
+
+            do
+            {
+
+                Console.WriteLine("Elija tipo de vehículo");
+                Console.WriteLine("1- Auomovil\n2-SUV\n3-PickUp");
+                res = Console.ReadLine().ToLower();
+
+                if (res != "s" && res != "n")
+                {
+                    Console.WriteLine("Elija una opción válida");
+                }
+
+            } while (res != "s" && res != "n");
+
+            switch (res)
+            {
+                case "1":  car.capacity = 5;
+                    break;
+                case "2":
+                    car.capacity = 7 ;
+                    break;
+                case "3":
+                    car.capacity = 2;
+                    break;
+                default:
+                    break;
+            }
+
+
             Console.WriteLine("------------------------------");
             Console.WriteLine("Ingrese marca.");
             car._carBrand = Console.ReadLine();
@@ -133,20 +166,14 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
         }
 
-
-        PersonaII driver = new PersonaII();
-        public bool gotDriver { get; set; }
-
-
-       
-
-        public bool getDriver(PersonaIII driver)
+        public int getPassenger()
         {
 
-            return gotDriver;
+            return 0;
         }
 
 
-       
+
+
     }
 }
