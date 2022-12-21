@@ -118,7 +118,44 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             return p.drive;
         }
 
+        public List<PersonaAutomovil> createPassengers()
+        {
 
+            List<PersonaAutomovil> passengers = new List<PersonaAutomovil>();
+            int res = 0;
+            string name = "";
+            bool isOk =false;
+            try
+            {
+
+                Console.WriteLine("Cantidad de pasajeros");
+                res = int.Parse(Console.ReadLine());
+                isOk = true;
+            }
+            catch (FormatException)
+            {
+                isOk = false;
+                throw;
+            }
+            PersonaAutomovil p = new PersonaAutomovil();
+
+            Console.WriteLine("Ingrese nombre conductor/a");
+            p._name = Console.ReadLine();
+
+            passengers.Add(p);
+
+            while (passengers.Count <= res)
+            {
+                PersonaAutomovil p1 = new PersonaAutomovil();
+                
+                Console.WriteLine("Ingrese nombre pasajero/a");
+                p._name = Console.ReadLine();
+                passengers.Add(p1);
+            }
+
+
+            return passengers;
+        }
 
 
 

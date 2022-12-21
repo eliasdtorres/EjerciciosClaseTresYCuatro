@@ -6,9 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 using static EjerciciosClaseTresYCuatro.Ejercicio4.PersonaII;
 // Ejercicio 11 : Agregar a la clase Auto, la posibilidad de tener una Persona como conductor.
+
 // Siendo que ahora el auto no puede encender su motor si no hay un conductor presente.Además el Conductor debe tener 18 años como mínimo.
 //12.Agregar a la clase Auto la posibilidad de llevar Pasajeros. (de 0 a la
 //capacidad que tenga el auto). Considere agregar una property Capacidad
+
+//13.Añadir a la clase Auto, la posibilidad de poder llevar una Mascota, pero sólo si hay un conductor presente. La mascota puede o no contar como pasajero
+//dependiendo del Tamaño de la mascota. por lo que el número de lugares disponibles puede verse reducido. Además, si no hay lugares disponibles en
+//el vehículo, la mascota no podrá subir al auto. Si la Mascota es pequeña, irá en el regazo de algún pasajero, pero no del conductor. Agregar un método
+//que permita saber en el regazo de quién va la Mascota. Además otro método para que la Mascota se mueva al regazo de otro pasajero.
+
 namespace EjerciciosClaseTresYCuatro.Ejercicio11
 {
     internal class Automovil
@@ -24,6 +31,8 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
         public bool _isOn { get; set; }
 
         public int capacity { get; set; }
+
+        public bool canGetPet { get; set; }
 
 
 
@@ -49,10 +58,11 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
             switch (res)
             {
-                case "1":  car.capacity = 5;
+                case "1":
+                    car.capacity = 5;
                     break;
                 case "2":
-                    car.capacity = 7 ;
+                    car.capacity = 7;
                     break;
                 case "3":
                     car.capacity = 2;
@@ -166,14 +176,25 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
         }
 
-        public int getPassenger()
+        public int getPassenger(Automovil car, List<PersonaAutomovil> passengers)
         {
+            bool canGoUp = false;
+            if (passengers.Count >= car.capacity)
+            {
+                canGoUp = true;
+            }
+            else
+            {
+                Console.WriteLine("La cantidad de pasajeros es mayor a la capacidad del vehículo");
+                canGoUp = false;
+            }
 
             return 0;
         }
 
-
-
-
+        public bool canGetPet()
+        {
+            return false;
+        }
     }
 }
