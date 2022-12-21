@@ -1,5 +1,6 @@
 ﻿
 using EjerciciosClaseTresYCuatro.Ejercicio_9;
+using EjerciciosClaseTresYCuatro.Ejercicio11;
 using EjerciciosClaseTresYCuatro.Ejercicio2;
 using EjerciciosClaseTresYCuatro.Ejercicio3;
 using EjerciciosClaseTresYCuatro.Ejercicio4;
@@ -10,6 +11,7 @@ using EjerciciosClaseTresYCuatro.Ejercicio8;
 using System;
 using System.Globalization;
 using System.IO.IsolatedStorage;
+using static EjerciciosClaseTresYCuatro.Ejercicio_9.AutoII;
 using static EjerciciosClaseTresYCuatro.Ejercicio4.PersonaII;
 
 namespace EjerciciosClaseTresYCuatro
@@ -372,7 +374,30 @@ namespace EjerciciosClaseTresYCuatro
             //{
             //    Console.WriteLine("No se adquirió ningun smartphone");
             //}
-            
+
+
+
+            // Ejercicio 11 : Agregar método de validacion de conductor
+
+           // Console.WriteLine("Registro de conductor: ");
+           // Console.WriteLine("------------------------------");
+           // string res = "";
+
+           // PersonaAutomovil p = new PersonaAutomovil();
+
+           // p = p.createPersona();
+
+
+           //Automovil car = new Automovil();
+
+           // car = car.createCar(car);
+
+           // p.drive = p.driveCar(p);
+
+           // car.startEngine(p);
+
+
+
 
 
         }

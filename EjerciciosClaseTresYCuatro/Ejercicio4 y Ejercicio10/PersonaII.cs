@@ -61,6 +61,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio4
                 PersonaIII p = new PersonaIII();
                 int day = 0, month = 0, year = 0;
                 bool _isOk = false;
+
                 Console.WriteLine("Registro de persona.");
                 Console.WriteLine("Ingrese nombre de la persona");
                 p._name = Console.ReadLine().ToUpper();
@@ -108,9 +109,14 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio4
                 string res = "";
 
                 do
-                { 
+                {
                     Console.WriteLine("¿Subirse al vehículo? s/n");
                     res = Console.ReadLine().ToLower();
+
+                    if (res != "s" && res != "n")
+                    {
+                        Console.WriteLine("Ingrese una opción válida");
+                    }
 
                 } while (res != "s" && res != "n");
 
@@ -121,11 +127,11 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio4
                 }
                 else
                 {
-                   Console.WriteLine(p._name + " no desea conducir. ");
+                    Console.WriteLine(p._name + " no desea conducir. ");
                     p.drive = false;
                 }
 
-                return drive;
+                return p.drive;
             }
 
 
