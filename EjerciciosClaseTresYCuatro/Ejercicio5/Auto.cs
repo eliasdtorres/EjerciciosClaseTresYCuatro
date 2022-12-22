@@ -1,4 +1,5 @@
-﻿using EjerciciosClaseTresYCuatro.Ejercicio5;
+﻿using EjerciciosClaseTresYCuatro.Ejercicio_9;
+using EjerciciosClaseTresYCuatro.Ejercicio5;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,16 +24,41 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio5
 
         }
 
-        public void startEngine()
+        public Auto createCar(Auto car)
+        {
+
+            Console.WriteLine("Registro de Vehículo");
+            Console.WriteLine("Ingrese marca.");
+            car._carBrand = Console.ReadLine();
+
+            Console.WriteLine("Ingrese modelo.");
+            car._model = Console.ReadLine();
+
+            Console.WriteLine("Ingrese color.");
+            car._color = Console.ReadLine();
+
+            car._isOn = false;
+
+            Console.WriteLine("Marca: " + car._carBrand + "\nModelo: " + car._model + "\nColor: " + car._color + "\n¿Está encendido?: " + car._isOn);
+
+            return car;
+        }
+
+
+
+        public bool startEngine(bool isOn)
         {
             Console.WriteLine("El vehículo está encendido.");
             _isOn = true;
+
+            return _isOn;
         }
 
-        public void stoptEngine()
+        public bool stopEngine(bool _isOn)
         {
             Console.WriteLine("El vehículo está apagado.");
             _isOn = false;
+            return _isOn;
         }
 
     }

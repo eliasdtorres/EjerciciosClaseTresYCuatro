@@ -14,19 +14,10 @@ using static EjerciciosClaseTresYCuatro.Ejercicio4.PersonaII;
 
 namespace EjerciciosClaseTresYCuatro.Ejercicio_9
 {
-    internal class AutoII
+    internal class AutoII : Auto
     {
 
-        public string _carBrand { get; set; }
-        public string _model { get; set; }
-
-        public string _color { get; set; }
-
         public double velocity { get; set; }
-
-        public bool _isOn { get; set; }
-
-
 
 
         public AutoII createCar(AutoII car)
@@ -50,22 +41,6 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio_9
             return car;
         }
 
-
-
-        public bool startEngine(bool isOn)
-        {
-            Console.WriteLine("El vehículo está encendido.");
-            _isOn = true;
-
-            return _isOn;
-        }
-
-        public bool stopEngine(bool _isOn)
-        {
-            Console.WriteLine("El vehículo está apagado.");
-            _isOn = false;
-            return _isOn;
-        }
 
 
         public double acelerate(AutoII car)

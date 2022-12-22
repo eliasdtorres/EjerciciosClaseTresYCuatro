@@ -1,4 +1,5 @@
-﻿using EjerciciosClaseTresYCuatro.Ejercicio11___12___13;
+﻿using EjerciciosClaseTresYCuatro.Ejercicio_9;
+using EjerciciosClaseTresYCuatro.Ejercicio11___12___13;
 using EjerciciosClaseTresYCuatro.Ejercicio4;
 using System;
 using System.Collections.Generic;
@@ -19,17 +20,8 @@ using static EjerciciosClaseTresYCuatro.Ejercicio4.PersonaII;
 
 namespace EjerciciosClaseTresYCuatro.Ejercicio11
 {
-    internal class Automovil
+    internal class Automovil : AutoII
     {
-
-        public string _carBrand { get; set; }
-        public string _model { get; set; }
-
-        public string _color { get; set; }
-
-        public double velocity { get; set; }
-
-        public bool _isOn { get; set; }
 
         public int capacity { get; set; }
 
@@ -40,32 +32,42 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
         public Automovil createCar(Automovil car)
         {
-            string res = "";
+            int res = 0;
+            bool _isOk = false;
             Console.WriteLine("Registro de Vehículo");
 
             do
             {
 
-                Console.WriteLine("Elija tipo de vehículo");
-                Console.WriteLine("1- Auomovil\n2-SUV\n3-PickUp");
-                res = Console.ReadLine().ToLower();
+                
 
-                if (res != "s" && res != "n")
+
+
+                try
+                {
+                    Console.WriteLine("Elija tipo de vehículo");
+                    Console.WriteLine("1- Automovil\n2-SUV\n3-PickUp");
+                    res = int.Parse(Console.ReadLine());
+                    _isOk = true;
+                }
+                catch (FormatException)
                 {
                     Console.WriteLine("Elija una opción válida");
+                    _isOk = false;
                 }
 
-            } while (res != "s" && res != "n");
+
+            } while (!_isOk);
 
             switch (res)
             {
-                case "1":
+                case 1:
                     car.capacity = 5;
                     break;
-                case "2":
+                case 2:
                     car.capacity = 7;
                     break;
-                case "3":
+                case 3:
                     car.capacity = 2;
                     break;
                 default:
@@ -87,7 +89,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             car.velocity = 0;
             car._isOn = false;
             Console.WriteLine("------------------------------");
-            Console.WriteLine("Marca: " + car._carBrand + "\nModelo: " + car._model + "\nColor: " + car._color + "\n¿Está encendido?: " + car._isOn);
+            Console.WriteLine("Marca: " + car._carBrand + "\nModelo: " + car._model + "\nColor: "  + car._color + "\nCapacidad: " + car.capacity + "\n¿Está encendido?: " + car._isOn);
             Console.WriteLine("------------------------------");
             return car;
         }
