@@ -416,13 +416,6 @@ namespace EjerciciosClaseTresYCuatro
 
             //---------------------------------------------------------------------------------------------------
 
-
-            //PersonaAutomovil p = new PersonaAutomovil();
-            //List<PersonaAutomovil>passengers = p.createPassengers();
-            //foreach (var item in passengers)
-            //{
-            //    Console.WriteLine(item.ToString(item));
-            //}
             Automovil car = new Automovil();
             PersonaAutomovil p = new PersonaAutomovil();
             MascotaAutomovil pet = new MascotaAutomovil();
@@ -436,8 +429,11 @@ namespace EjerciciosClaseTresYCuatro
             car.canGetPet = car.GetPet(pet, car);
             
             Console.WriteLine("Puede llevar pac: "+ car.canGetPassenger + "\nPuede llevar pet: " + car.canGetPet);
-
-
+            
+            foreach (var item in car.capacity)
+            {
+                Console.WriteLine(item.);
+            }
         }
 
     }

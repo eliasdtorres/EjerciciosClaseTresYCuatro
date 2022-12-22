@@ -79,7 +79,11 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11___12___13
             return mascota;
         }
 
+        public string ToString(MascotaAutomovil pet)
+        {
 
+            return "Nombre : " + pet.name ;
+        }
 
     }
 

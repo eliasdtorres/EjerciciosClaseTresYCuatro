@@ -24,7 +24,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
     internal class Automovil : AutoII
     {
 
-        public Object[] capacity { get; set; }
+        public PersonaAutomovil[] capacity { get; set; }
 
         public bool canGetPet { get; set; }
         public bool canGetPassenger{get ; set;}
@@ -60,13 +60,13 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             switch (res)
             {
                 case 1:
-                    car.capacity = new Object[5];
+                    car.capacity =new PersonaAutomovil[5];
                     break;
                 case 2:
-                    car.capacity = new Object[7];
+                    car.capacity =new PersonaAutomovil[7];
                     break;
                 case 3:
-                    car.capacity = new Object[2];
+                    car.capacity = new PersonaAutomovil[2];
                     break;
                 default:
                     break;
@@ -184,6 +184,13 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             if (passengers.Count <= car.capacity.Length)
             {
                 canGetPassenger = true;
+                foreach (var pax in passengers)
+                {
+                    for (int i = 0; i < car.capacity.Length; i++)
+                    {
+                        car.capacity[i] = pax;
+                    }
+                }
             }
             else
             {
@@ -207,10 +214,10 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
                 for (int i = 0; i < car.capacity.Length; i++)
                 {
-                    if (car.capacity[i] == null && count == 0)
+                    if (car.capacity[i] == null)
                     {
                         canGetPet = true;
-                        car.capacity[i] = mascota;
+                        car.capacity[i] =;
 
                     }
                 }
@@ -220,7 +227,13 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             return canGetPet;
         }
 
+        public string ToString(Automovil car)
+        {
 
-        
+            return "espacio: " + car.capacity;
+        }
+
     }
+
+    
 }
