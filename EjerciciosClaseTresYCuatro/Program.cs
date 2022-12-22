@@ -428,12 +428,8 @@ namespace EjerciciosClaseTresYCuatro
             car.canGetPassenger =  car.GetPassenger(car, passengers);
             car.canGetPet = car.GetPet(pet, car);
             
-            Console.WriteLine("Puede llevar pac: "+ car.canGetPassenger + "\nPuede llevar pet: " + car.canGetPet);
             
-            foreach (var item in car.capacity)
-            {
-                Console.WriteLine(item.);
-            }
+            
         }
 
     }

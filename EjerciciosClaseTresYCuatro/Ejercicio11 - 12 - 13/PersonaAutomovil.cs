@@ -110,6 +110,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             Console.WriteLine("Ingrese nombre conductor/a");
             chofer._name = Console.ReadLine().ToUpper();
             chofer.canHasPet = false;
+            chofer.drive= true;
 
             passengers.Add(chofer);
 
@@ -132,6 +133,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
                 Console.WriteLine("Ingrese nombre pasajero/a");
                 p._name = Console.ReadLine().ToUpper();
                 p.canHasPet = true;
+                p.drive= false;
                 passengers.Add(p);
 
                 Console.WriteLine("¿Ingresar más pasajeros ? s/n");

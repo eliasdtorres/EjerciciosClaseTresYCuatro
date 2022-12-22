@@ -27,7 +27,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
         public PersonaAutomovil[] capacity { get; set; }
 
         public bool canGetPet { get; set; }
-        public bool canGetPassenger{get ; set;}
+        public bool canGetPassenger { get; set; }
 
 
 
@@ -60,10 +60,10 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             switch (res)
             {
                 case 1:
-                    car.capacity =new PersonaAutomovil[5];
+                    car.capacity = new PersonaAutomovil[5];
                     break;
                 case 2:
-                    car.capacity =new PersonaAutomovil[7];
+                    car.capacity = new PersonaAutomovil[7];
                     break;
                 case 3:
                     car.capacity = new PersonaAutomovil[2];
@@ -87,7 +87,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             car.velocity = 0;
             car._isOn = false;
             Console.WriteLine("------------------------------");
-            Console.WriteLine("Marca: " + car._carBrand + "\nModelo: " + car._model + "\nColor: " + car._color + "\nCapacidad: " + 
+            Console.WriteLine("Marca: " + car._carBrand + "\nModelo: " + car._model + "\nColor: " + car._color + "\nCapacidad: " +
                 car.capacity.Length + "\n¿Está encendido?: " + car._isOn);
             Console.WriteLine("------------------------------");
             return car;
@@ -201,39 +201,56 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             return canGetPassenger;
         }
 
-        public bool GetPet(MascotaAutomovil mascota, Automovil car)
+        public bool GetPet(MascotaAutomovil mascota, Automovil car, List<PersonaAutomovil>passengers)
         {
             int count = 0;
+            bool haveDriver = false;
 
-            if (mascota.sizePet.Equals("Chica") )
+            foreach (var item in passengers)
             {
-                canGetPet = true;
+                if (item.drive)
+                {
+                    haveDriver = true;
+                }
+            }
+
+            if (haveDriver)
+            {
+                if (mascota.sizePet.Equals("Chica"))
+                {
+                    Console.WriteLine("La mascota entra en el auto sin ocupar espacio");
+                    canGetPet = true;
+                }
+                else
+                {
+                    for (int i = 0; i < car.capacity.Length - 1; i++)
+                    {
+                        if (car.capacity[i] == null)
+                        {
+                            Console.WriteLine("La mascota entra en el auto ocupando un espacio");
+                            canGetPet = true;
+                            break;
+                        }
+                        else if (car.capacity[i] == null && count == 0)
+                        {
+                            Console.WriteLine("La mascota no entra en el vehículo");
+                            canGetPet = false;
+                            count = 1;
+                        }
+                    }
+                }
             }
             else
             {
-
-                for (int i = 0; i < car.capacity.Length; i++)
-                {
-                    if (car.capacity[i] == null)
-                    {
-                        canGetPet = true;
-                        car.capacity[i] =;
-
-                    }
-                }
-
-
+                Console.Write("No hay chofer, no puede subir una mascota");
+                canGetPet = false;
             }
             return canGetPet;
         }
 
-        public string ToString(Automovil car)
-        {
-
-            return "espacio: " + car.capacity;
-        }
+       
 
     }
 
-    
+
 }
