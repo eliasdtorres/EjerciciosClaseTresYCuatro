@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace EjerciciosClaseTresYCuatro.Ejercicio11___12___13
 {
-    internal class MascotaAutomovil
+    internal class MascotaAutomovil : MascotaII
     {
 
-        public string name { get; set; }
-        public int energy { get; set; }
-        public string typePet { get; set; }
+        //public string name { get; set; }
+        //public int energy { get; set; }
+        //public string typePet { get; set; }
 
         public string sizePet { get; set; }
 
 
-        public  MascotaAutomovil() { }
+        public MascotaAutomovil() { }
 
 
 
@@ -63,7 +63,8 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11___12___13
 
             switch (res)
             {
-                case 1: mascota.sizePet = "Chica";
+                case 1:
+                    mascota.sizePet = "Chica";
                     break;
                 case 2:
                     mascota.sizePet = "Mediana";
@@ -101,7 +102,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11___12___13
 
 
 
-
-
     }
+
 }
+

@@ -1,6 +1,8 @@
 ﻿
 using EjerciciosClaseTresYCuatro.Ejercicio_9;
+using EjerciciosClaseTresYCuatro.Ejercicio10;
 using EjerciciosClaseTresYCuatro.Ejercicio11;
+using EjerciciosClaseTresYCuatro.Ejercicio11___12___13;
 using EjerciciosClaseTresYCuatro.Ejercicio2;
 using EjerciciosClaseTresYCuatro.Ejercicio3;
 using EjerciciosClaseTresYCuatro.Ejercicio4;
@@ -343,7 +345,7 @@ namespace EjerciciosClaseTresYCuatro
             //    }
             //} while (res == "default");
 
-            //Ejercicio 11 : Agregarle a una persona un Smartphone. Uso de herencia.
+            //Ejercicio 10 : Agregarle a una persona un Smartphone. Uso de herencia.
             //string res = "";
             //PersonaIII p = new PersonaIII();
             //p = p.createPersona();
@@ -365,7 +367,7 @@ namespace EjerciciosClaseTresYCuatro
 
             //if (res == "s")
             //{
-            //    Smartphone smartphone= new Smartphone();
+            //    Smartphone smartphone = new Smartphone();
 
             //    p.smart = smartphone.createSmartphone(smartphone);
 
@@ -379,24 +381,22 @@ namespace EjerciciosClaseTresYCuatro
 
             // Ejercicio 11 : Agregar método de validacion de conductor
 
-           // Console.WriteLine("Registro de conductor: ");
-           // Console.WriteLine("------------------------------");
-           // string res = "";
+            // Console.WriteLine("Registro de conductor: ");
+            // Console.WriteLine("------------------------------");
+            // string res = "";
 
-           // PersonaAutomovil p = new PersonaAutomovil();
+            // PersonaAutomovil p = new PersonaAutomovil();
 
-           // p = p.createPersona();
-
-
-           //Automovil car = new Automovil();
-
-           // car = car.createCar(car);
-
-           // p.drive = p.driveCar(p);
-
-           // car.startEngine(p);
+            // p = p.createPersona();
 
 
+            //Automovil car = new Automovil();
+
+            // car = car.createCar(car);
+
+            // p.drive = p.driveCar(p);
+
+            // car.startEngine(p);
 
 
 

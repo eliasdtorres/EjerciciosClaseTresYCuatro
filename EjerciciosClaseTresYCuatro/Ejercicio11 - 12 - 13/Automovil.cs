@@ -1,4 +1,5 @@
-﻿using EjerciciosClaseTresYCuatro.Ejercicio4;
+﻿using EjerciciosClaseTresYCuatro.Ejercicio11___12___13;
+using EjerciciosClaseTresYCuatro.Ejercicio4;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -192,8 +193,12 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             return 0;
         }
 
-        public bool canGetPet()
+        public bool getPet(MascotaAutomovil mascota, Automovil car)
         {
+            if (mascota.sizePet == "Chica")
+            {
+                car.canGetPet = true;
+            }
             return false;
         }
     }

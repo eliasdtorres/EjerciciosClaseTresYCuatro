@@ -1,4 +1,7 @@
 ﻿using EjerciciosClaseTresYCuatro.Ejercicio_9;
+using EjerciciosClaseTresYCuatro.Ejercicio10;
+using EjerciciosClaseTresYCuatro.Ejercicio3;
+using EjerciciosClaseTresYCuatro.Ejercicio4;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EjerciciosClaseTresYCuatro.Ejercicio11
 {
-    internal class PersonaAutomovil
+    internal class PersonaAutomovil : PersonaIII
     {
         public string _name { get; set; }
         public string _lastname { get; set; }
@@ -16,21 +19,21 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
         public PersonaAutomovil() { }
 
-        public void fullname(string _name, string _lastname)
-        {
+        //public void fullname(string _name, string _lastname)
+        //{
 
 
-            Console.WriteLine("Nombre completo: " + _name + " " + _lastname);
+        //    Console.WriteLine("Nombre completo: " + _name + " " + _lastname);
 
 
-        }
+        //}
 
-        public int age(DateTime _dateOfBirth)
-        {
-            int age = DateTime.Today.AddTicks(-_dateOfBirth.Ticks).Year - 1;
-            Console.WriteLine("Edad: " + age);
-            return age;
-        }
+        //public int age(DateTime _dateOfBirth)
+        //{
+        //    int age = DateTime.Today.AddTicks(-_dateOfBirth.Ticks).Year - 1;
+        //    Console.WriteLine("Edad: " + age);
+        //    return age;
+        //}
 
 
 
