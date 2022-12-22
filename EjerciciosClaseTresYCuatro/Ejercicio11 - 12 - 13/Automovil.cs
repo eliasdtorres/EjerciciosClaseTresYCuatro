@@ -4,6 +4,7 @@ using EjerciciosClaseTresYCuatro.Ejercicio4;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using static EjerciciosClaseTresYCuatro.Ejercicio4.PersonaII;
@@ -23,9 +24,10 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
     internal class Automovil : AutoII
     {
 
-        public int capacity { get; set; }
+        public Object[] capacity { get; set; }
 
         public bool canGetPet { get; set; }
+        public bool canGetPassenger{get ; set;}
 
 
 
@@ -38,10 +40,6 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
             do
             {
-
-                
-
-
 
                 try
                 {
@@ -62,13 +60,13 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             switch (res)
             {
                 case 1:
-                    car.capacity = 5;
+                    car.capacity = new Object[5];
                     break;
                 case 2:
-                    car.capacity = 7;
+                    car.capacity = new Object[7];
                     break;
                 case 3:
-                    car.capacity = 2;
+                    car.capacity = new Object[2];
                     break;
                 default:
                     break;
@@ -89,7 +87,8 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             car.velocity = 0;
             car._isOn = false;
             Console.WriteLine("------------------------------");
-            Console.WriteLine("Marca: " + car._carBrand + "\nModelo: " + car._model + "\nColor: "  + car._color + "\nCapacidad: " + car.capacity + "\n¿Está encendido?: " + car._isOn);
+            Console.WriteLine("Marca: " + car._carBrand + "\nModelo: " + car._model + "\nColor: " + car._color + "\nCapacidad: " + 
+                car.capacity.Length + "\n¿Está encendido?: " + car._isOn);
             Console.WriteLine("------------------------------");
             return car;
         }
@@ -179,29 +178,49 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
         }
 
-        public int getPassenger(Automovil car, List<PersonaAutomovil> passengers)
+        public bool GetPassenger(Automovil car, List<PersonaAutomovil> passengers)
         {
-            bool canGoUp = false;
-            if (passengers.Count >= car.capacity)
+            bool canGetPassenger = false;
+            if (passengers.Count <= car.capacity.Length)
             {
-                canGoUp = true;
+                canGetPassenger = true;
             }
             else
             {
                 Console.WriteLine("La cantidad de pasajeros es mayor a la capacidad del vehículo");
-                canGoUp = false;
+                canGetPassenger = false;
             }
 
-            return 0;
+            return canGetPassenger;
         }
 
-        public bool getPet(MascotaAutomovil mascota, Automovil car)
+        public bool GetPet(MascotaAutomovil mascota, Automovil car)
         {
-            if (mascota.sizePet == "Chica")
+            int count = 0;
+
+            if (mascota.sizePet.Equals("Chica") )
             {
-                car.canGetPet = true;
+                canGetPet = true;
             }
-            return false;
+            else
+            {
+
+                for (int i = 0; i < car.capacity.Length; i++)
+                {
+                    if (car.capacity[i] == null && count == 0)
+                    {
+                        canGetPet = true;
+                        car.capacity[i] = mascota;
+
+                    }
+                }
+
+
+            }
+            return canGetPet;
         }
+
+
+        
     }
 }

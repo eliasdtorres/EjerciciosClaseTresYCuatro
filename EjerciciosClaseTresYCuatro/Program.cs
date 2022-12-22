@@ -389,6 +389,8 @@ namespace EjerciciosClaseTresYCuatro
             //---------------------------------------------------------------------------------------------------
 
             // Ejercicio 11 : Agregar método de validacion de conductor
+            //12.Agregar a la clase Auto la posibilidad de llevar Pasajeros.
+
 
             // Console.WriteLine("Registro de conductor: ");
             // Console.WriteLine("------------------------------");
@@ -411,6 +413,29 @@ namespace EjerciciosClaseTresYCuatro
             //m = m.createPet(m);
 
 
+
+            //---------------------------------------------------------------------------------------------------
+
+
+            //PersonaAutomovil p = new PersonaAutomovil();
+            //List<PersonaAutomovil>passengers = p.createPassengers();
+            //foreach (var item in passengers)
+            //{
+            //    Console.WriteLine(item.ToString(item));
+            //}
+            Automovil car = new Automovil();
+            PersonaAutomovil p = new PersonaAutomovil();
+            MascotaAutomovil pet = new MascotaAutomovil();
+            List<PersonaAutomovil> passengers = new List<PersonaAutomovil>();
+
+
+            car = car.createCar(car);
+            p.createPassengers();
+            pet = pet.createPet(pet);
+            car.canGetPassenger =  car.GetPassenger(car, passengers);
+            car.canGetPet = car.GetPet(pet, car);
+            
+            Console.WriteLine("Puede llevar pac: "+ car.canGetPassenger + "\nPuede llevar pet: " + car.canGetPet);
 
 
         }

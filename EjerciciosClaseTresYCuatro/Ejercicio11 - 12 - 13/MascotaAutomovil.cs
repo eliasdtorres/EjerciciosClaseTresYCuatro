@@ -53,7 +53,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11___12___13
                 catch (FormatException)
                 {
                     isOk = false;
-                    throw;
+                    Console.WriteLine("Seleccione opción válida.");
                 }
 
             } while (!isOk);

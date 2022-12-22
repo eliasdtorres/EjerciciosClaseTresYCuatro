@@ -1,7 +1,4 @@
-﻿using EjerciciosClaseTresYCuatro.Ejercicio_9;
-using EjerciciosClaseTresYCuatro.Ejercicio10;
-using EjerciciosClaseTresYCuatro.Ejercicio3;
-using EjerciciosClaseTresYCuatro.Ejercicio4;
+﻿using EjerciciosClaseTresYCuatro.Ejercicio10;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,29 +13,10 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
         public string _lastname { get; set; }
         public DateTime _dateOfBirth { get; set; }
         public bool drive { get; set; }
+        public bool canHasPet { get; set; }
+        public bool hasPet { get; set; }
 
         public PersonaAutomovil() { }
-
-        //public void fullname(string _name, string _lastname)
-        //{
-
-
-        //    Console.WriteLine("Nombre completo: " + _name + " " + _lastname);
-
-
-        //}
-
-        //public int age(DateTime _dateOfBirth)
-        //{
-        //    int age = DateTime.Today.AddTicks(-_dateOfBirth.Ticks).Year - 1;
-        //    Console.WriteLine("Edad: " + age);
-        //    return age;
-        //}
-
-
-
-
-
         public PersonaAutomovil createPersona()
         {
             PersonaAutomovil p = new PersonaAutomovil();
@@ -123,44 +101,55 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
         public List<PersonaAutomovil> createPassengers()
         {
-
             List<PersonaAutomovil> passengers = new List<PersonaAutomovil>();
-            int res = 0;
-            string name = "";
-            bool isOk =false;
-            try
-            {
 
-                Console.WriteLine("Cantidad de pasajeros");
-                res = int.Parse(Console.ReadLine());
-                isOk = true;
-            }
-            catch (FormatException)
-            {
-                isOk = false;
-                throw;
-            }
-            PersonaAutomovil p = new PersonaAutomovil();
+            string pax = "", more = "";
+
+            PersonaAutomovil chofer = new PersonaAutomovil();
 
             Console.WriteLine("Ingrese nombre conductor/a");
-            p._name = Console.ReadLine();
+            chofer._name = Console.ReadLine().ToUpper();
+            chofer.canHasPet = false;
 
-            passengers.Add(p);
+            passengers.Add(chofer);
 
-            while (passengers.Count <= res)
+            do
             {
-                PersonaAutomovil p1 = new PersonaAutomovil();
-                
+                Console.WriteLine("¿Subir pasajero? s/n");
+                pax = Console.ReadLine().ToLower();
+
+                if (pax != "s" && pax != "n")
+                {
+                    Console.WriteLine("Ingrese una opción correcta (s/n)");
+                }
+
+            } while (pax != "s" && pax != "n");
+
+            while (more == "s" ||( (more != "s" && more != "n") && pax == "s") || pax == "")
+            {
+                PersonaAutomovil p = new PersonaAutomovil();
+
                 Console.WriteLine("Ingrese nombre pasajero/a");
-                p._name = Console.ReadLine();
-                passengers.Add(p1);
+                p._name = Console.ReadLine().ToUpper();
+                p.canHasPet = true;
+                passengers.Add(p);
+
+                Console.WriteLine("¿Ingresar más pasajeros ? s/n");
+                more = Console.ReadLine().ToLower();
+
+                if ((more != "s" && more != "n") || more =="" )
+                {
+                    Console.WriteLine("Ingrese una opción correcta (s/n)");
+                }
             }
-
-
             return passengers;
         }
 
 
+        public string ToString(PersonaAutomovil p)
+        {
+            return "Nombre: " + p._name + "\nTiene una mascota encima: " + p.hasPet + "\n--------------------------------------";
+        }
 
 
     }
