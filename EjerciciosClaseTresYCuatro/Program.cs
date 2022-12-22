@@ -1,5 +1,6 @@
 ﻿
 using EjerciciosClaseTresYCuatro.Ejercicio_9;
+using EjerciciosClaseTresYCuatro.Ejercicio1;
 using EjerciciosClaseTresYCuatro.Ejercicio10;
 using EjerciciosClaseTresYCuatro.Ejercicio11;
 using EjerciciosClaseTresYCuatro.Ejercicio11___12___13;
@@ -22,6 +23,9 @@ namespace EjerciciosClaseTresYCuatro
     {
         public static void Main(string[] args)
         {
+            //Ejercicio 1 : Ejercicios de la guía anterior como métodos de una clase ( Funcionan todos ) 
+            //EjercicioUno e = new EjercicioUno();
+            //e.adivinaNumero2();
 
             //---------------------------------------------------------------------------------------------------
 
@@ -185,6 +189,7 @@ namespace EjerciciosClaseTresYCuatro
             //    Console.WriteLine(mascota.name + " se retiró sileciosamente");
             //}
 
+            //---------------------------------------------------------------------------------------------------
 
             //Ejercicio 8 : Smartphone
 
@@ -297,6 +302,7 @@ namespace EjerciciosClaseTresYCuatro
 
             //Console.WriteLine("Programa finalizado");
 
+            //---------------------------------------------------------------------------------------------------
 
             // Ejercicio 9 : Auto , añadir métodos de acelearación y desaceleración
 
@@ -346,6 +352,8 @@ namespace EjerciciosClaseTresYCuatro
             //    }
             //} while (res == "default");
 
+            //---------------------------------------------------------------------------------------------------
+
             //Ejercicio 10 : Agregarle a una persona un Smartphone. Uso de herencia.
             //string res = "";
             //PersonaIII p = new PersonaIII();
@@ -378,7 +386,7 @@ namespace EjerciciosClaseTresYCuatro
             //    Console.WriteLine("No se adquirió ningun smartphone");
             //}
 
-
+            //---------------------------------------------------------------------------------------------------
 
             // Ejercicio 11 : Agregar método de validacion de conductor
 
@@ -402,7 +410,7 @@ namespace EjerciciosClaseTresYCuatro
             //MascotaII m = new MascotaII();
             //m = m.createPet(m);
 
-            
+
 
 
         }
