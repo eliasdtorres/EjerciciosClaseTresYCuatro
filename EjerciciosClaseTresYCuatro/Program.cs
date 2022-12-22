@@ -125,7 +125,7 @@ namespace EjerciciosClaseTresYCuatro
             //MascotaII mascota = new MascotaII();
             //string res = "";
 
-            //mascota.createPet(mascota);
+            //mascota = mascota.createPet(mascota);
 
             //Console.WriteLine("¿Qué desea hacer con su mascota?");
 
@@ -138,6 +138,7 @@ namespace EjerciciosClaseTresYCuatro
 
             //    if (res == "1" || res == "alimentar")
             //    {
+
 
             //        if (mascota.energy > 100)
             //        {
@@ -397,6 +398,11 @@ namespace EjerciciosClaseTresYCuatro
             // p.drive = p.driveCar(p);
 
             // car.startEngine(p);
+
+            //MascotaII m = new MascotaII();
+            //m = m.createPet(m);
+
+
 
 
 

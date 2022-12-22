@@ -4,20 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//7. Agregar a la Mascota un método para correr. Cada vez que la mascota corre, gasta un 10% de su energía. Solamente puede correr si su nivel de energía
+//es superior al 20%.
 
 namespace EjerciciosClaseTresYCuatro.Ejercicio7
 {
-    internal class MascotaII
+    internal class MascotaII : Mascota
     {
-
-        public string name { get; set; }
-        public int energy { get; set; }
-        public string typePet { get; set; }
-
-
         public MascotaII() { }
-
-
 
         public MascotaII createPet(MascotaII mascota)
         {
@@ -27,7 +21,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio7
             Console.WriteLine("Registro de mascota.\n--------------------------------");
 
             Console.WriteLine("Ingrese el nombre.");
-            mascota.name = Console.ReadLine().ToUpper();
+            mascota.name = Console.ReadLine();
 
             Console.WriteLine("\n--------------------------------\nEs : \n1- Gato\n2- Perro\n--------------------------------");
             mascota.typePet = Console.ReadLine().ToUpper();
@@ -41,27 +35,11 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio7
                 mascota.typePet = "Perro";
             }
 
-            mascota.energy = 70;
+            mascota.energy = 60;
             Console.WriteLine("\n--------------------------------\n" + "Nombre: " + mascota.name +
                 "\nTipo: " + mascota.typePet + "\nEnergía: " + mascota.energy + "\n" + "--------------------------------" + "");
 
             return mascota;
-        }
-
-
-
-
-
-
-
-
-        public int alimentar(string name, int energy)
-        {
-            energy = this.energy += (energy * 30) / 100;
-            Console.WriteLine("Se alimentó a " + name);
-            Console.WriteLine("Energía restante: " + energy);
-
-            return energy;
         }
 
 

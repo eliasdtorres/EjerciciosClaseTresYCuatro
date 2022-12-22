@@ -10,9 +10,6 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11___12___13
     internal class MascotaAutomovil : MascotaII
     {
 
-        //public string name { get; set; }
-        //public int energy { get; set; }
-        //public string typePet { get; set; }
 
         public string sizePet { get; set; }
 
@@ -77,28 +74,10 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11___12___13
 
             mascota.energy = 70;
             Console.WriteLine("\n--------------------------------\n" + "Nombre: " + mascota.name +
-                "\nTipo: " + mascota.typePet + "\nEnergía: " + mascota.energy + "\n" + "--------------------------------" + "");
+                "\nTipo: " + mascota.typePet + "\nEnergía: " + mascota.energy + "\nDimension de la mascota: " + mascota.sizePet + "\n--------------------------------");
 
             return mascota;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
