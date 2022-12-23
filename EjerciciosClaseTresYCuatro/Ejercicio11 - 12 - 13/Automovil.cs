@@ -258,12 +258,11 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             return canGetPet;
         }
 
-        public void whoGotThePet(List<PersonaAutomovil> passengers)
+        public void whoGotThePet(List<PersonaAutomovil>passengers)
         {
             foreach (var item in passengers)
             {
-                if (item._name != "") ;
-
+                if (item._name != "")
                 {
                     Console.WriteLine(item.ToString(item));
                 }

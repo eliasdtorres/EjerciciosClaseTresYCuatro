@@ -416,18 +416,26 @@ namespace EjerciciosClaseTresYCuatro
 
             //---------------------------------------------------------------------------------------------------
 
-            Automovil car = new Automovil();
-            PersonaAutomovil p = new PersonaAutomovil();
-            MascotaAutomovil pet = new MascotaAutomovil();
-            List<PersonaAutomovil> passengers = new List<PersonaAutomovil>();
+            //Automovil car = new Automovil();
+            //PersonaAutomovil p = new PersonaAutomovil();
+            //MascotaAutomovil pet = new MascotaAutomovil();
+            //List<PersonaAutomovil> passengers = new List<PersonaAutomovil>();
 
 
-            car = car.createCar(car);
-            passengers = p.createPassengers();
-            pet = pet.createPet(pet);
-            car.canGetPassenger =  car.GetPassenger(car, passengers);
-            car.canGetPet = car.GetPet(pet, car,passengers, p);
-            
+            //car = car.createCar(car);
+            //passengers = p.createPassengers();
+            //Console.WriteLine("-------------------------------------------------------------");
+            //pet = pet.createPet(pet);
+            //Console.WriteLine("-------------------------------------------------------------");
+            //car.canGetPassenger = car.GetPassenger(car, passengers);
+            //Console.WriteLine("-------------------------------------------------------------");
+            //car.canGetPet = car.GetPet(pet, car, passengers, p);
+            //Console.WriteLine("-------------------------------------------------------------");
+            //car.whoGotThePet(passengers);
+            //passengers = pet.move(passengers);
+            //Console.WriteLine("-------------------------------------------------------------");
+            //Console.WriteLine("Ahora la mascota la lleva:");
+            //car.whoGotThePet(passengers);
             
             
         }

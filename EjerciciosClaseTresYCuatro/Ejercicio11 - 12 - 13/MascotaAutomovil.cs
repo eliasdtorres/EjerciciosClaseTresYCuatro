@@ -1,4 +1,6 @@
-﻿using EjerciciosClaseTresYCuatro.Ejercicio7;
+﻿using EjerciciosClaseTresYCuatro.Ejercicio11;
+using EjerciciosClaseTresYCuatro.Ejercicio3;
+using EjerciciosClaseTresYCuatro.Ejercicio7;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,10 +81,36 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11___12___13
             return mascota;
         }
 
+
+
+
+        public List<PersonaAutomovil> move(List<PersonaAutomovil> passengers)
+        {
+
+            foreach (PersonaAutomovil item in passengers)
+            {
+
+
+                if (item.canHasPet && item.hasPet)
+                {
+                    item.hasPet = false;
+                }
+                else if (item.canHasPet && !item.hasPet)
+                { 
+                    item.hasPet = true;
+                    break;
+                }
+
+
+            }
+            return passengers;
+            
+        }
+
         public string ToString(MascotaAutomovil pet)
         {
 
-            return "Nombre : " + pet.name ;
+            return "Nombre : " + pet.name;
         }
 
     }
