@@ -423,10 +423,10 @@ namespace EjerciciosClaseTresYCuatro
 
 
             car = car.createCar(car);
-            p.createPassengers();
+            passengers = p.createPassengers();
             pet = pet.createPet(pet);
             car.canGetPassenger =  car.GetPassenger(car, passengers);
-            car.canGetPet = car.GetPet(pet, car);
+            car.canGetPet = car.GetPet(pet, car,passengers, p);
             
             
             

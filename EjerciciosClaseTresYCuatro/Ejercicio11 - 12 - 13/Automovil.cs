@@ -201,25 +201,35 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             return canGetPassenger;
         }
 
-        public bool GetPet(MascotaAutomovil mascota, Automovil car, List<PersonaAutomovil>passengers)
+        public bool GetPet(MascotaAutomovil mascota, Automovil car, List<PersonaAutomovil> passengers, PersonaAutomovil p)
         {
             int count = 0;
             bool haveDriver = false;
 
-            foreach (var item in passengers)
+            foreach (PersonaAutomovil aux in passengers)
             {
-                if (item.drive)
+
+                if (aux.drive == true)
                 {
                     haveDriver = true;
                 }
             }
-
             if (haveDriver)
             {
                 if (mascota.sizePet.Equals("Chica"))
                 {
-                    Console.WriteLine("La mascota entra en el auto sin ocupar espacio");
+                    Console.WriteLine("La mascota entra en el auto sin ocupar espacio, se sienta en un pasajero.");
                     canGetPet = true;
+                    foreach (var item in passengers)
+                    {
+                        if (item.canHasPet && !item.hasPet)
+                        {
+                            item.hasPet = true;
+                            break;
+                        }
+                    }
+
+
                 }
                 else
                 {
@@ -233,7 +243,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
                         }
                         else if (car.capacity[i] == null && count == 0)
                         {
-                            Console.WriteLine("La mascota no entra en el vehículo");
+                            Console.WriteLine("La mascota no entra en el vehículo, no hay lugar.");
                             canGetPet = false;
                             count = 1;
                         }
@@ -248,7 +258,17 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             return canGetPet;
         }
 
-       
+        public void whoGotThePet(List<PersonaAutomovil> passengers)
+        {
+            foreach (var item in passengers)
+            {
+                if (item._name != "") ;
+
+                {
+                    Console.WriteLine(item.ToString(item));
+                }
+            }
+        }
 
     }
 
