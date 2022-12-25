@@ -174,27 +174,17 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
 
 
-        //while (more == "s" || ((more != "s" && more != "n") && pax == "s") || pax == "")
-        //{
-        //    PersonaAutomovil p = new PersonaAutomovil();
-
-        //    Console.WriteLine("Ingrese nombre pasajero/a");
-        //    p._name = Console.ReadLine().ToUpper();
-        //    p.canHasPet = true;
-        //    p.drive = false;
-        //    passengers.Add(p);
-
-        //    Console.WriteLine("¿Ingresar más pasajeros ? s/n");
-        //    more = Console.ReadLine().ToLower();
-
-
-
-
-
         public string ToString(PersonaAutomovil p)
         {
 
             return "Nombre: " + p._name + "\nTiene una mascota encima: " + p.hasPet + "\n--------------------------------------";
+        }
+
+
+        public string ToString(PersonaAutomovil p,Automovil car)
+        {
+
+            return "Nombre: " + p._name + "\nEstá conduciendo: " + p.drive + "\n--------------------------------------";
         }
     }
 

@@ -38,14 +38,14 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
                 try
                 {
-                    Console.WriteLine("Elija tipo de vehículo");
-                    Console.WriteLine("1- Automovil\n2-SUV\n3-PickUp");
+                    Console.WriteLine("Elija tipo de vehículo (seleccione opción)");
+                    Console.WriteLine("1- Automovil\n2- SUV\n3- PickUp");
                     res = int.Parse(Console.ReadLine());
                     _isOk = true;
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("Elija una opción válida");
+                    Console.WriteLine("Elija un número válido");
                     _isOk = false;
                 }
 

@@ -505,13 +505,14 @@ namespace EjerciciosClaseTresYCuatro
 
                     Console.WriteLine("---------------------------------------------");
                     Console.WriteLine("El vehículo está detenido");
+
                     car.dropPassengers(car, passengers);
 
-                    if (passengers.Count==0)
+                    if (car.capacity.Length==1)
                     {
-
+                        Console.WriteLine("descendieron todos los pasajeros. ");
                         Console.WriteLine("Ocupante en el vehículo: ");
-                        Console.WriteLine(passengers[0].ToString(passengers[0]));
+                        Console.WriteLine(passengers[0].ToString(passengers[0],car));
                     }
 
 
@@ -524,7 +525,6 @@ namespace EjerciciosClaseTresYCuatro
 
 
             }
-
 
         }
 
