@@ -439,92 +439,100 @@ namespace EjerciciosClaseTresYCuatro
 
 
             //14.Agregar un método a Auto para bajar a todos los pasajeros.
-            Automovil car = new Automovil();
-            PersonaAutomovil p = new PersonaAutomovil();
-            List<PersonaAutomovil> passengers = new List<PersonaAutomovil>();
-            string descender = "";
+            //Automovil car = new Automovil();
+            //PersonaAutomovil p = new PersonaAutomovil();
+            //List<PersonaAutomovil> passengers = new List<PersonaAutomovil>();
+            //string descender = "";
 
-
-            car = car.createCar(car);
-            passengers = p.createPassengers();
-            car.GetPassenger(car,passengers);
+            //car = car.createCar(car);
+            //passengers = p.createPassengers();
+            //car.GetPassenger(car,passengers);
          
-            passengers[0].drive = passengers[0].driveCar(passengers[0]);
+            //passengers[0].drive = passengers[0].driveCar(passengers[0]);
             //Se establece que el conductor quiere y puede conducir el vehículo
-            car.startEngine(passengers[0]);
-            car.acelerate(car);
-
-            do
-            {
-                Console.WriteLine("¿Descender pasajeros? s/n");
-                descender = Console.ReadLine();
-
-                if (descender != "s" && descender != "n")
-                {
-                    Console.WriteLine("Elija opción correcta.");
-                }
-
-            } while (descender != "s" && descender != "n");
-
-
-            if (descender == "s")
-            {
-                car.dropPassengers(car, passengers);
-
-            }
-            else
-            {
-                Console.WriteLine("No se bajará a ningún pasajero.");
-            }
-
-            if (!car.canDropPassengers)
-            {
-                string desacelerar = "";
-                do
-                {
-                    Console.WriteLine("¿Detener vehículo? s/n");
-                    desacelerar = Console.ReadLine();
-
-                    if (desacelerar != "s" && desacelerar != "n")
-                    {
-                        Console.WriteLine("Elija opción correcta.");
-                    }
-
-                } while (desacelerar != "s" && desacelerar != "n");
 
 
 
-                if (desacelerar == "s")
-                {
-                    while (car.velocity > 0)
-                    {
 
-                        car.decelerate(car);
-                        Console.WriteLine("Velocidad actual: " + car.velocity + "km/h");
-                    }
 
-                    Console.WriteLine("---------------------------------------------");
-                    Console.WriteLine("El vehículo está detenido");
+            //car.startEngine(passengers[0]);
+            //car.acelerate(car);
 
-                    car.dropPassengers(car, passengers);
+            //do
+            //{
+            //    Console.WriteLine("¿Descender pasajeros? s/n");
+            //    descender = Console.ReadLine();
 
-                    if (car.capacity.Length==1)
-                    {
-                        Console.WriteLine("descendieron todos los pasajeros. ");
-                        Console.WriteLine("Ocupante en el vehículo: ");
-                        Console.WriteLine(passengers[0].ToString(passengers[0],car));
-                    }
+            //    if (descender != "s" && descender != "n")
+            //    {
+            //        Console.WriteLine("Elija opción correcta.");
+            //    }
+
+            //} while (descender != "s" && descender != "n");
+
+
+            //if (descender == "s")
+            //{
+            //    car.dropPassengers(car, passengers);
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No se bajará a ningún pasajero.");
+            //}
+
+            //if (!car.canDropPassengers)
+            //{
+            //    string desacelerar = "";
+            //    do
+            //    {
+            //        Console.WriteLine("¿Detener vehículo? s/n");
+            //        desacelerar = Console.ReadLine();
+
+            //        if (desacelerar != "s" && desacelerar != "n")
+            //        {
+            //            Console.WriteLine("Elija opción correcta.");
+            //        }
+
+            //    } while (desacelerar != "s" && desacelerar != "n");
+
+
+
+            //    if (desacelerar == "s")
+            //    {
+            //        while (car.velocity > 0)
+            //        {
+
+            //            car.decelerate(car);
+            //            Console.WriteLine("Velocidad actual: " + car.velocity + "km/h");
+            //        }
+
+            //        Console.WriteLine("---------------------------------------------");
+            //        Console.WriteLine("El vehículo está detenido");
+
+            //        car.dropPassengers(car, passengers);
+
+            //        if (car.capacity.Length==1)
+            //        {
+            //            Console.WriteLine("descendieron todos los pasajeros. ");
+            //            Console.WriteLine("Ocupante en el vehículo: ");
+            //            Console.WriteLine(passengers[0].ToString(passengers[0],car));
+            //        }
 
 
                    
-                }
-                else
-                {
-                    Console.WriteLine("El vehículo continúa circulando");
-                }
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("El vehículo continúa circulando");
+            //    }
 
 
-            }
+            //}
+
+
+
+
 
         }
 
