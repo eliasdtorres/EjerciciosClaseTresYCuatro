@@ -2,12 +2,6 @@
 using EjerciciosClaseTresYCuatro.Ejercicio11___12___13;
 using EjerciciosClaseTresYCuatro.Ejercicio4;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.ConstrainedExecution;
-using System.Text;
-using System.Threading.Tasks;
-using static EjerciciosClaseTresYCuatro.Ejercicio4.PersonaII;
 // Ejercicio 11 : Agregar a la clase Auto, la posibilidad de tener una Persona como conductor.
 
 // Siendo que ahora el auto no puede encender su motor si no hay un conductor presente.Además el Conductor debe tener 18 años como mínimo.
@@ -28,6 +22,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
         public bool canGetPet { get; set; }
         public bool canGetPassenger { get; set; }
+        public bool canDropPassengers { get; set; }
 
 
 
@@ -86,6 +81,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
 
             car.velocity = 0;
             car._isOn = false;
+            car.canDropPassengers = true;
             Console.WriteLine("------------------------------");
             Console.WriteLine("Marca: " + car._carBrand + "\nModelo: " + car._model + "\nColor: " + car._color + "\nCapacidad: " +
                 car.capacity.Length + "\n¿Está encendido?: " + car._isOn);
@@ -153,6 +149,32 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
                     Console.WriteLine("Se llegó a la velocidad máxima permitida.");
                     return car.velocity = 130;
                 }
+                return car.velocity;
+            }
+        }
+
+
+        public double acelerate(Automovil car, PersonaAutomovil p)
+        {
+            if (car._isOn && car.velocity <= 0 && p.drive)
+            {
+                car.velocity = 40;
+                Console.WriteLine("Se aceleró el vehículo.");
+                return car.velocity;
+            }
+            else if (car._isOn && p.drive)
+            {
+                car.velocity += car.velocity * 0.1;
+                Console.WriteLine("Se aceleró el vehículo.");
+                if (car.velocity > 130)
+                {
+                    Console.WriteLine("Se llegó a la velocidad máxima permitida.");
+                    return car.velocity = 130;
+                }
+                return car.velocity;
+            }
+            else
+            {
                 return car.velocity;
             }
         }
@@ -258,7 +280,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
             return canGetPet;
         }
 
-        public void whoGotThePet(List<PersonaAutomovil>passengers)
+        public void whoGotThePet(List<PersonaAutomovil> passengers)
         {
             foreach (var item in passengers)
             {
@@ -268,6 +290,29 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio11
                 }
             }
         }
+
+
+        public Automovil dropPassengers(Automovil car, List<PersonaAutomovil> passengers)
+        {
+
+
+            if (car.velocity == 0)
+            {
+                car.capacity = new PersonaAutomovil[1];
+                car.canDropPassengers = true;
+
+            }
+            else
+            {
+                Console.WriteLine("Para descenso de pasajeros primero debe detener el vehículo.");
+                car.canDropPassengers = false;
+            }
+
+
+            return car;
+        }
+
+
 
     }
 

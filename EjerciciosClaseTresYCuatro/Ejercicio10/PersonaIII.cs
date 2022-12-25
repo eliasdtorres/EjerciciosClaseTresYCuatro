@@ -12,6 +12,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio10
 {
     internal class PersonaIII : PersonaII
     {
+        public DateTime _dateOfBirth { get; set; }
         public Smartphone smart { get; set; }
         public bool drive { get; set; }
 
@@ -43,7 +44,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio10
 
                     Console.WriteLine("Ingrese día: ");
                     day = int.Parse(Console.ReadLine());
-                     
+
                     Console.WriteLine("Ingrese mes: ");
                     month = int.Parse(Console.ReadLine());
 
@@ -60,10 +61,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio10
                 }
             } while (!_isOk);
 
-            if (_isOk)
-            {
-                p._dateOfBirth = new DateTime(year, month, day);
-            }
+            p._dateOfBirth = new DateTime(year, month, day);
 
             return p;
         }

@@ -21,12 +21,9 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio3
 
         public void fullname(string _name, string _lastname)
         {
-
-
             Console.WriteLine("Nombre completo: " + _name + " " + _lastname);
-
-
         }
+
 
     }
 }
