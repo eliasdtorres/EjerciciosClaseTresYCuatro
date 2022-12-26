@@ -40,11 +40,10 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
 
         public List<Libro> createBooksList()
         {
-            List<Libro> libros = new List<Libro>();
-            string res = "";
 
-            Console.WriteLine("Complete los datos");
+            List<Libro> libros = new List<Libro>();
             Libro libro = new Libro();
+            string res = "";
 
             libros.Add(libro.createLibro());
 
@@ -82,20 +81,28 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
             return libros;
         }
 
-        public List<Libro> deleteBook(List<Libro> libros, string title)
+        public List<Libro> deleteBook(List<Libro> libros)
         {
+            string title = "";
+            bool exists = false;
+
+            Console.WriteLine("Borrar libro");
+
+            title = Console.ReadLine().ToUpper();
+
             foreach (var item in libros)
             {
                 if (item.name.Equals(title))
                 {
+                    exists = true;
                     libros.Remove(item);
+                    Console.WriteLine("-------------------\nLibro eliminado\n-------------------");
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("No se encontró el libro");
-                    break;
-                }
+            }
+            if (!exists)
+            {
+                Console.WriteLine("No se encontró el libro");
             }
             return libros;
         }
@@ -105,8 +112,11 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
             Console.WriteLine("Lista completa de libros: ");
             foreach (var item in libros)
             {
-                Console.WriteLine(item.ToString(item));
-                Console.WriteLine("-------------------------");
+                if (item.name!=null)
+                {
+                    Console.WriteLine(item.ToString(item));
+                    Console.WriteLine("-------------------------");
+                }
             }
         }
 
@@ -117,7 +127,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
             Console.WriteLine("Libros leidos:");
             foreach (var item in libros)
             {
-                if (item.wasRead)
+                if (item.wasRead && item.name!=null)
                 {
                     Console.WriteLine(item.ToString(item));
                     Console.WriteLine("-------------------------");
@@ -128,9 +138,10 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
         public void showUnreadBooks(List<Libro> libros)
         {
             Console.WriteLine("Libros no leidos:");
+
             foreach (var item in libros)
             {
-                if (!item.wasRead)
+                if (!item.wasRead && item.name!=null)
                 {
                     Console.WriteLine("- " + item.ToString(item));
                     Console.WriteLine("-------------------------");
@@ -152,20 +163,27 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
             Console.WriteLine("Cantidad total de páginas leídas: " + totalPages);
         }
 
-        public List<Libro> readBook(List<Libro> libros, string title)
+        public List<Libro> readBook(List<Libro> libros)
         {
+            string title = "";
+            bool exists = false;
+
+            Console.WriteLine("leer libro");
+            title = Console.ReadLine().ToUpper();
+
             foreach (var item in libros)
             {
                 if (item.name.Equals(title))
                 {
                     item.wasRead = true;
+                    exists = true;
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("No se encontró el libro");
-                    break;
-                }
+            }
+
+            if (!exists)
+            {
+                Console.WriteLine("No se encontró el libro");
             }
             return libros;
         }

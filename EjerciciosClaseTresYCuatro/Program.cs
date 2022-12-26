@@ -534,23 +534,55 @@ namespace EjerciciosClaseTresYCuatro
             //Ejercicio 15 : Estudiante con lista de libros
             List<Libro> libros = new List<Libro>();
             Estudiante estudiante = new Estudiante();
-            string title = "";
+            string accion = "";
+            bool repeat = true;
+
             estudiante = estudiante.createEstudent();
             libros = estudiante.createBooksList();
-            estudiante.showBooksList(libros);
 
-            Console.WriteLine("Borrar libro");
-            title = Console.ReadLine().ToUpper();
+            do
+            {
 
-            libros = estudiante.deleteBook(libros, title);
-            estudiante.showBooksList(libros);
+                Console.WriteLine("¿Qué desea hacer? Seleccione acción.");
+                Console.WriteLine("1- Agregar libro a la lista\n2- Quitar libro de la lista\n3- Mostrar lista de libros\n4- Leer libro" +
+                    "\n5- Mostrar libros leídos\n6- Mostrar libros no leídos\n7- Mostrar cantidad de páginas leídas\n8- Salir");
 
-            Console.WriteLine("leer libro");
-            title = Console.ReadLine().ToUpper();
+                accion = Console.ReadLine();
 
-            libros = estudiante.readBook(libros, title);
-            estudiante.showReadBooks(libros);
-            estudiante.showUnreadBooks(libros);
+                switch (accion)
+                {
+                    case "1":
+                        libros = estudiante.addBook(libros);
+                        break;
+                    case "2":
+                        libros = estudiante.deleteBook(libros);
+                        break;
+                    case "3":
+                        estudiante.showBooksList(libros);
+                        break;
+                    case "4":
+                        libros = estudiante.readBook(libros);
+                        break;
+                    case "5":
+                        estudiante.showReadBooks(libros);
+                        break;
+                    case "6":
+                        estudiante.showUnreadBooks(libros);
+                        break;
+                    case "7":
+                        estudiante.showTotalPagesRead(libros);
+                        break;
+                    case "8":
+                        Console.WriteLine("Programa finalizado");
+                        repeat = false;
+                        break;
+                    default:
+                        Console.WriteLine("Debe elegir una opción dentro del rango 1 - 8");
+                        break;
+                }
+            } while (repeat);
+
+
         }
 
     }
