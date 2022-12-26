@@ -542,10 +542,12 @@ namespace EjerciciosClaseTresYCuatro
 
             do
             {
-
+                Console.WriteLine("-------------------------");
                 Console.WriteLine("¿Qué desea hacer? Seleccione acción.");
+                Console.WriteLine("-------------------------");
                 Console.WriteLine("1- Agregar libro a la lista\n2- Quitar libro de la lista\n3- Mostrar lista de libros\n4- Leer libro" +
                     "\n5- Mostrar libros leídos\n6- Mostrar libros no leídos\n7- Mostrar cantidad de páginas leídas\n8- Salir");
+                Console.WriteLine("-------------------------");
 
                 accion = Console.ReadLine();
 

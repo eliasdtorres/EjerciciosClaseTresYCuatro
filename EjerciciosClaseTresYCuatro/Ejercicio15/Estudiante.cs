@@ -32,7 +32,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
             Console.WriteLine("Ingresar nombre");
             estudiante._name = Console.ReadLine();
 
-            Console.WriteLine("Ingresar nombre");
+            Console.WriteLine("Ingresar apellido");
             estudiante._lastname = Console.ReadLine();
 
             return estudiante;
@@ -76,8 +76,11 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
         }
         public List<Libro> addBook(List<Libro> libros)
         {
-            Libro book = new Libro();
-            libros.Add(book);
+            Libro libro = new Libro();
+
+            libro = libro.createLibro();
+            libros.Add(libro);
+
             return libros;
         }
 
