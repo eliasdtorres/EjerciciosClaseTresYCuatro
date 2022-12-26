@@ -23,7 +23,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
         public string name;
         public string author;
         public int pages;
-        public bool wasRead { get; set; }
+        public bool wasRead { get; set; } = false;
 
         public Libro() { } 
 
@@ -31,13 +31,14 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
 
             bool isOk = true;
             Libro libro = new Libro();
-
-            Console.WriteLine("Registro.");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Registro de libro.");
+            Console.WriteLine("-----------------------");
             Console.WriteLine("Nombre del libro.");
-            libro.name = Console.ReadLine();
+            libro.name = Console.ReadLine().ToUpper();
 
             Console.WriteLine("Autor del libro.");
-            libro.author = Console.ReadLine();
+            libro.author = Console.ReadLine().ToUpper();
 
             do
             {
@@ -45,7 +46,7 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
                 {
                     isOk = true;
                     Console.WriteLine("Cantidad de páginas.");
-                    libro.pages = Console.Read();
+                    libro.pages = int.Parse(Console.ReadLine());
                 }
                 catch (FormatException)
                 {
@@ -57,18 +58,13 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
             
             return libro;
         }
+
+
+        public string ToString(Libro libro)
+        {
+
+            return "Título: "+ libro.name + "\nAutor/a: "+ libro.author+ "\nCantidad de páginas: "+ libro.pages + "\nLeído: "+ libro.wasRead;
+        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

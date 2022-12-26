@@ -18,34 +18,109 @@ using System.Threading.Tasks;
 //quitar libros de la lista de libros (dos métodos diferentes).
 namespace EjerciciosClaseTresYCuatro.Ejercicio15
 {
-    internal class Estudiante : PersonaIII
+    internal class Estudiante : Persona
     {
-        public List<Libro>libros { get; set; }
+        public List<Libro> libros { get; set; }
+        public Estudiante() { }
+
+        public Estudiante createEstudent()
+        {
+            Estudiante estudiante = new Estudiante();
+
+            Console.WriteLine("Registro de estudiante.");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Ingresar nombre");
+            estudiante._name = Console.ReadLine();
+
+            Console.WriteLine("Ingresar nombre");
+            estudiante._lastname = Console.ReadLine();
+
+            return estudiante;
+        }
+
+        public List<Libro> createBooksList()
+        {
+            List<Libro> libros = new List<Libro>();
+            string res = "";
+
+            Console.WriteLine("Complete los datos");
+            Libro libro = new Libro();
+
+            libros.Add(libro.createLibro());
+
+            do
+            {
+                Console.WriteLine("¿Añadir otro libro? s/n");
+                res = Console.ReadLine().ToLower();
+
+                if (res != "s" && res != "n")
+                {
+                    Console.WriteLine("Ingrese una opción correcta");
+                }
+
+                if (res == "s")
+                {
+                    libros.Add(libro.createLibro());
+                    Console.WriteLine("----------------------");
+                }
+                else if (res == "n")
+                {
+                    Console.WriteLine("----------------------");
+                    Console.WriteLine("Lista de libros creada");
+                    Console.WriteLine("----------------------");
+                }
+
+            } while ((res != "s" && res != "n") || res == "s");
 
 
-        public List<Libro> addBook(List<Libro>libros)
+            return libros;
+        }
+        public List<Libro> addBook(List<Libro> libros)
         {
             Libro book = new Libro();
             libros.Add(book);
             return libros;
         }
 
-        public List<Libro> deleteBook(List<Libro> libros)
+        public List<Libro> deleteBook(List<Libro> libros, string title)
         {
-
+            foreach (var item in libros)
+            {
+                if (item.name.Equals(title))
+                {
+                    libros.Remove(item);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("No se encontró el libro");
+                    break;
+                }
+            }
             return libros;
+        }
+
+        public void showBooksList(List<Libro> libros)
+        {
+            Console.WriteLine("Lista completa de libros: ");
+            foreach (var item in libros)
+            {
+                Console.WriteLine(item.ToString(item));
+                Console.WriteLine("-------------------------");
+            }
         }
 
 
 
         public void showReadBooks(List<Libro> libros)
-        { 
+        {
             Console.WriteLine("Libros leidos:");
-            foreach (var aux in libros)
+            foreach (var item in libros)
             {
-                if (aux.wasRead)
+                if (item.wasRead)
                 {
-                    Console.WriteLine("- " + aux.ToString);
+                    Console.WriteLine(item.ToString(item));
+                    Console.WriteLine("-------------------------");
                 }
             }
         }
@@ -53,14 +128,14 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
         public void showUnreadBooks(List<Libro> libros)
         {
             Console.WriteLine("Libros no leidos:");
-            foreach (var aux in libros)
+            foreach (var item in libros)
             {
-                if (!aux.wasRead)
+                if (!item.wasRead)
                 {
-                    Console.WriteLine("- " + aux.ToString);
+                    Console.WriteLine("- " + item.ToString(item));
+                    Console.WriteLine("-------------------------");
                 }
             }
-
         }
 
         public void showTotalPagesRead(List<Libro> libros)
@@ -70,18 +145,29 @@ namespace EjerciciosClaseTresYCuatro.Ejercicio15
             {
                 if (aux.wasRead)
                 {
-                    Console.WriteLine("Libro: " + aux.name + "\nCantidad de páginas: "+ aux.pages);
+                    Console.WriteLine("Libro: " + aux.name + "\nCantidad de páginas: " + aux.pages);
                     totalPages += aux.pages;
                 }
             }
             Console.WriteLine("Cantidad total de páginas leídas: " + totalPages);
         }
 
-        
-
-
-
-
-
+        public List<Libro> readBook(List<Libro> libros, string title)
+        {
+            foreach (var item in libros)
+            {
+                if (item.name.Equals(title))
+                {
+                    item.wasRead = true;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("No se encontró el libro");
+                    break;
+                }
+            }
+            return libros;
+        }
     }
 }

@@ -4,6 +4,7 @@ using EjerciciosClaseTresYCuatro.Ejercicio1;
 using EjerciciosClaseTresYCuatro.Ejercicio10;
 using EjerciciosClaseTresYCuatro.Ejercicio11;
 using EjerciciosClaseTresYCuatro.Ejercicio11___12___13;
+using EjerciciosClaseTresYCuatro.Ejercicio15;
 using EjerciciosClaseTresYCuatro.Ejercicio2;
 using EjerciciosClaseTresYCuatro.Ejercicio3;
 using EjerciciosClaseTresYCuatro.Ejercicio4;
@@ -447,7 +448,7 @@ namespace EjerciciosClaseTresYCuatro
             //car = car.createCar(car);
             //passengers = p.createPassengers();
             //car.GetPassenger(car,passengers);
-         
+
             //passengers[0].drive = passengers[0].driveCar(passengers[0]);
             //Se establece que el conductor quiere y puede conducir el vehículo
 
@@ -520,7 +521,7 @@ namespace EjerciciosClaseTresYCuatro
             //        }
 
 
-                   
+
             //    }
             //    else
             //    {
@@ -530,10 +531,26 @@ namespace EjerciciosClaseTresYCuatro
 
             //}
 
+            //Ejercicio 15 : Estudiante con lista de libros
+            List<Libro> libros = new List<Libro>();
+            Estudiante estudiante = new Estudiante();
+            string title = "";
+            estudiante = estudiante.createEstudent();
+            libros = estudiante.createBooksList();
+            estudiante.showBooksList(libros);
 
+            Console.WriteLine("Borrar libro");
+            title = Console.ReadLine().ToUpper();
 
+            libros = estudiante.deleteBook(libros, title);
+            estudiante.showBooksList(libros);
 
+            Console.WriteLine("leer libro");
+            title = Console.ReadLine().ToUpper();
 
+            libros = estudiante.readBook(libros, title);
+            estudiante.showReadBooks(libros);
+            estudiante.showUnreadBooks(libros);
         }
 
     }
